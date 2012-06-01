@@ -1,3 +1,3 @@
-# Dizzle is a Domain Specific Language meant to be used to help build domain models for Lokad.CQRS. It is built using the Visual Studio Visualization and Modeling SDK.  For more about Lokad.CQRS, visit [Lokad.CQRS Homepage](http://lokad.github.com/lokad-cqrs/)
+# Dizzle is a Domain Specific Language meant to be used to help build domain models for Lokad.CQRS.   It is built using the Visual Studio Visualization and Modeling SDK.  For more about Lokad.CQRS, visit [Lokad.CQRS Homepage](http://lokad.github.com/lokad-cqrs/)
 
 **Lokad.CQRS** is a **.NET framework and a set of guidance materials** for _building distributed and scalable applications_ to be **run on-premises or in the cloud**. This project helps to design and develop decoupled systems locally and bring them to the distributed environments later.

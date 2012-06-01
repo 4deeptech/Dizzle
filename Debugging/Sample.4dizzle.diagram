@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dizzleDiagram dslVersion="1.0.0.0" Id="09fb1e13-e116-4ee7-b2e2-be505b6d0d29" absoluteBounds="0, 0, 12.625, 8.5" name="Sample">
+  <boundedContextMoniker Id="d8762f4d-ca74-4008-8558-5eab6b544b97" />
+  <nestedChildShapes>
+    <aggregateRootShape Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" absoluteBounds="1.25, 0.75, 2, 0.625" fillColor="BurlyWood" textColor="Black" fillGradientMode="Horizontal">
+      <aggregateRootMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/PersonAggregate" />
+    </aggregateRootShape>
+    <aggregateStateShape Id="252b444a-a61d-4ba3-985b-23562061cbe8" absoluteBounds="5.375, 0.75, 2.25, 1.8208968098958334" fillColor="DarkGreen" textColor="White" fillGradientMode="Horizontal">
+      <aggregateStateMoniker Id="d39070a9-e7a0-4027-92ce-1a53a11a368c" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2d697da-852b-448e-b39b-3baaa5e3f762" absoluteBounds="5.3900000000000006, 1.26, 2.2199999999999998, 1.2108968098958333" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </aggregateStateShape>
+    <aggregateStateConnector Id="2327640b-025a-4190-892e-040dc1bfe9bf" edgePoints="[(3.25 : 1.0625); (5.375 : 1.0625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <aggregateRootHasAggregateStateMoniker Id="6cd0c405-ebbf-48d8-b542-d57b0f9d70f0" />
+      <nodes>
+        <aggregateRootShapeMoniker Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" />
+        <aggregateStateShapeMoniker Id="252b444a-a61d-4ba3-985b-23562061cbe8" />
+      </nodes>
+    </aggregateStateConnector>
+    <domainCommandShape Id="37eb9e09-2925-4146-9d4c-5fb843dc68b7" absoluteBounds="0.5, 1.875, 1.875, 1.6285953776041664" fillColor="DarkKhaki" textColor="Black" fillGradientMode="Horizontal">
+      <domainCommandMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/CreatePerson" />
+      <nestedChildShapes>
+        <elementListCompartment Id="142476a9-a8a9-4142-aaad-d3ddfd620d78" absoluteBounds="0.51500000000000012, 2.385, 1.8450000000000002, 1.0185953776041665" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </domainCommandShape>
+    <commandConnector Id="16bb1716-f0d8-4a62-bd3a-d437862b96d7" edgePoints="[(1.625 : 1.375); (1.625 : 1.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <aggregateRootHandlesDomainCommandsMoniker Id="b647c50f-2ffd-4788-9ce2-77675551344a" />
+      <nodes>
+        <aggregateRootShapeMoniker Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" />
+        <domainCommandShapeMoniker Id="37eb9e09-2925-4146-9d4c-5fb843dc68b7" />
+      </nodes>
+    </commandConnector>
+    <domainEventShape Id="4469b30f-0005-4465-8bd6-1e20a4762c57" absoluteBounds="2.5, 1.875, 1.75, 1.6285953776041664" fillColor="SteelBlue" textColor="Black" fillGradientMode="Horizontal">
+      <domainEventMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/PersonCreated" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c191094b-8d57-4982-b801-86ccf966217d" absoluteBounds="2.5149999999999997, 2.385, 1.7200000000000002, 1.0185953776041665" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </domainEventShape>
+    <domainEventConnector Id="dc947eff-d708-4882-aeff-a0a0428d1894" edgePoints="[(5.375 : 2.22294840494792); (4.25 : 2.22294840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <aggregateStateSubscribesToDomainEventsMoniker Id="b0974de6-7756-40ee-b2ed-51c991a06ff0" />
+      <nodes>
+        <aggregateStateShapeMoniker Id="252b444a-a61d-4ba3-985b-23562061cbe8" />
+        <domainEventShapeMoniker Id="4469b30f-0005-4465-8bd6-1e20a4762c57" />
+      </nodes>
+    </domainEventConnector>
+    <domainCommandShape Id="7eedeaee-3f8b-405a-adb7-a8752c15137a" absoluteBounds="0.5, 3.875, 1.875, 1.2439925130208325" fillColor="DarkKhaki" textColor="Black" fillGradientMode="Horizontal">
+      <domainCommandMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/RewardPerson" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2f98d9e-bf6a-41fc-9094-39d5a27d58c1" absoluteBounds="0.51500000000000012, 4.385, 1.8450000000000002, 0.63399251302083326" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </domainCommandShape>
+    <domainEventShape Id="1b34874e-924e-4a32-aaaa-14a71b9a3ab0" absoluteBounds="2.5, 3.875, 1.75, 1.8208968098958325" fillColor="SteelBlue" textColor="Black" fillGradientMode="Horizontal">
+      <domainEventMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/PersonRewarded" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ccd071d-850f-4665-827f-6ea0cc1d9bd2" absoluteBounds="2.5149999999999997, 4.385, 1.7200000000000002, 1.2108968098958333" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </domainEventShape>
+    <commandConnector Id="5c05dc60-cf58-4d3d-a30f-f1bfe2861605" edgePoints="[(1.25 : 1.10795454545455); (0.26 : 1.10795454545455); (0.26 : 4.45532490664308); (0.5 : 4.45532490664308)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <aggregateRootHandlesDomainCommandsMoniker Id="790ef0aa-0811-4507-bae1-1364acbda21a" />
+      <nodes>
+        <aggregateRootShapeMoniker Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" />
+        <domainCommandShapeMoniker Id="7eedeaee-3f8b-405a-adb7-a8752c15137a" />
+      </nodes>
+    </commandConnector>
+    <domainEventConnector Id="ca57cd3a-e964-4d51-be89-cf95e4b094cb" edgePoints="[(6.5 : 2.57089680989583); (6.5 : 4.78544840494792); (4.25 : 4.78544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <aggregateStateSubscribesToDomainEventsMoniker Id="d8f7957e-543f-4eb0-a5db-d8df23bfeff9" />
+      <nodes>
+        <aggregateStateShapeMoniker Id="252b444a-a61d-4ba3-985b-23562061cbe8" />
+        <domainEventShapeMoniker Id="1b34874e-924e-4a32-aaaa-14a71b9a3ab0" />
+      </nodes>
+    </domainEventConnector>
+    <viewShape Id="669d5edc-859e-4de6-88a6-de42fc86295f" absoluteBounds="10.375, 0.75, 2, 2.4648893229166666" fillColor="Orange" textColor="Black" fillGradientMode="Horizontal">
+      <viewMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/PersonView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27a8325f-31c1-47cc-8491-c6284e84d29a" absoluteBounds="10.39, 1.26, 1.9700000000000002, 1.2108968098958333" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="923e9729-4668-4e95-8a0b-61257b3dc830" absoluteBounds="10.39, 2.4808968098958335, 1.9700000000000002, 0.63399251302083326" name="Events" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </viewShape>
+    <entityShape Id="be88d123-7113-4f73-ac42-41bb4ed98676" absoluteBounds="7.875, 0.75, 2.125, 1.2439925130208334" fillColor="Thistle" fillGradientMode="Horizontal" textColor="Black">
+      <entityMoniker Id="32eb0bc9-4250-4266-88df-08c337ca7448" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0efb0fac-8e44-4784-a6dd-29ea870d6d17" absoluteBounds="7.8900000000000006, 1.26, 2.0949999999999998, 0.63399251302083326" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+  </nestedChildShapes>
+</dizzleDiagram>

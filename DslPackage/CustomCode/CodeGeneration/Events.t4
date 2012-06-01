@@ -1,0 +1,47 @@
+﻿namespace <#= this.BoundedContext.ModelNamespace #>.Events
+{
+<#
+foreach (DomainEvent element in this.BoundedContext.Element.AggregateState.DomainEvents)
+{
+#>
+	/// <summary>
+	/// <#= element.Description #>
+	/// </summary>
+	[DataContract(Namespace = "<#= this.BoundedContext.ModelNamespace #>")]
+    public partial class <#= element.Name #> : IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>>
+    {
+
+<#
+foreach (Property property in element.Properties)
+{
+#>
+		/// <summary>
+		/// <#= property.Description #>
+		/// </summary>
+		[DataMember(Order = <#= property.Order #>)] 
+        public <#= property.Type #> <#= property.Name #> { get; private set; }
+
+<#    
+}
+#>
+		public <#= element.Name #>() 
+        {
+            
+        }
+
+        public <#= element.Name #>(<#BuildProperties(element.Properties);#>)
+        {
+            <#BuildConstructorProperties(element.Properties);#>
+        }
+
+        public override string ToString()
+        {
+            return <#= BuildPropertiesToString(element.Properties)#>;
+        }
+    }//end <#= element.Name #> class
+
+
+<#    
+	} 
+#>
+}//end namespace

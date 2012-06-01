@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<boundedContext xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d8762f4d-ca74-4008-8558-5eab6b544b97" modelNamespace="Awesome.Domain" xmlns="http://schemas.microsoft.com/dsltools/Dizzle">
+  <element>
+    <aggregateRoot Id="1a4f9b9f-4bd0-4cb2-8bbd-f45eea897877" name="PersonAggregate" description="My sample person aggregate">
+      <aggregateState>
+        <aggregateRootHasAggregateState Id="6cd0c405-ebbf-48d8-b542-d57b0f9d70f0">
+          <aggregateState Id="d39070a9-e7a0-4027-92ce-1a53a11a368c" name="PersonAggregateState" description="My person state container">
+            <domainEvents>
+              <aggregateStateSubscribesToDomainEvents Id="b0974de6-7756-40ee-b2ed-51c991a06ff0">
+                <domainEventMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/PersonCreated" />
+              </aggregateStateSubscribesToDomainEvents>
+              <aggregateStateSubscribesToDomainEvents Id="d8f7957e-543f-4eb0-a5db-d8df23bfeff9">
+                <domainEventMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/PersonRewarded" />
+              </aggregateStateSubscribesToDomainEvents>
+            </domainEvents>
+            <properties>
+              <aggregateStateHasProperties Id="401ddc8a-8d39-41b3-9f16-27b7f5b09e01">
+                <property Id="1baf486c-cf7e-4f87-8746-d83073892bb9" order="1" name="Id" type="Guid" description="The unique id for the person" />
+              </aggregateStateHasProperties>
+              <aggregateStateHasProperties Id="31569419-80dc-47c8-8baf-f0fd3a92b5ec">
+                <property Id="81fe1a93-6255-4472-bc56-2e2318ddbb7d" order="2" name="FirstName" type="String" />
+              </aggregateStateHasProperties>
+              <aggregateStateHasProperties Id="7c649b95-1b60-4a9f-8fae-b66a57fe2ed6">
+                <property Id="9ff7b0c6-5897-4bdd-aa20-b71b76f447d5" order="3" name="LastName" type="String" />
+              </aggregateStateHasProperties>
+              <aggregateStateHasProperties Id="7e1fa1d3-bfcc-4c55-8238-81835e679e8a">
+                <property Id="01ad6cf2-b5f4-4cfe-9848-efe04bf8d14a" order="4" name="Salary" type="float" description="The person's salaray" />
+              </aggregateStateHasProperties>
+              <aggregateStateHasProperties Id="a23c7337-ee03-4281-a40e-e468892e6383">
+                <property Id="19d21330-b0d4-4a00-bd41-5ded9f1b4ca3" order="5" name="Bonuses" type="List&lt;BonusReward&gt;" description="The list of bonuses" />
+              </aggregateStateHasProperties>
+            </properties>
+          </aggregateState>
+        </aggregateRootHasAggregateState>
+      </aggregateState>
+      <domainCommands>
+        <aggregateRootHandlesDomainCommands Id="b647c50f-2ffd-4788-9ce2-77675551344a">
+          <domainCommandMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/CreatePerson" />
+        </aggregateRootHandlesDomainCommands>
+        <aggregateRootHandlesDomainCommands Id="790ef0aa-0811-4507-bae1-1364acbda21a">
+          <domainCommandMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/RewardPerson" />
+        </aggregateRootHandlesDomainCommands>
+      </domainCommands>
+    </aggregateRoot>
+  </element>
+  <aggregateState>
+    <boundedContextReferencesAggregateState Id="d78c31eb-19cf-437e-9e71-703a56b24059">
+      <aggregateStateMoniker Id="d39070a9-e7a0-4027-92ce-1a53a11a368c" />
+    </boundedContextReferencesAggregateState>
+  </aggregateState>
+  <domainCommands>
+    <boundedContextHasDomainCommands Id="68110d15-8e9c-4847-88a0-92764b34d98e">
+      <domainCommand Id="e760cffb-486d-487a-8041-9a3c54b644b7" name="CreatePerson" description="Create a new person">
+        <properties>
+          <domainCommandHasProperties Id="3281b9fd-e5cd-420b-a5c6-5474f2fe7770">
+            <property Id="80fb8e3c-3e7f-4760-9005-5b311b686a92" order="1" name="Id" type="Guid" description="The unique id for the person" />
+          </domainCommandHasProperties>
+          <domainCommandHasProperties Id="8cc6be80-e3f8-4315-8927-f96f99510011">
+            <property Id="7a841713-2ebf-43ee-8cfd-552e92186401" order="2" name="FirstName" type="String" />
+          </domainCommandHasProperties>
+          <domainCommandHasProperties Id="6fc1dfff-484d-48aa-bccb-45832f4bcbb7">
+            <property Id="1c2902e5-af9f-41d3-832a-c5ddc3a31c94" order="3" name="LastName" type="String" />
+          </domainCommandHasProperties>
+          <domainCommandHasProperties Id="31d1fac4-6e7d-4c58-a36a-5597b72f7af0">
+            <property Id="9cb74373-6c21-4e28-9eb4-3c2d09758ed2" order="4" name="Salary" type="float" description="The person's salaray" />
+          </domainCommandHasProperties>
+        </properties>
+      </domainCommand>
+    </boundedContextHasDomainCommands>
+    <boundedContextHasDomainCommands Id="6f765fbd-2c67-4067-add6-c04f76ae4296">
+      <domainCommand Id="64bd79a5-d669-4864-a665-a7cb171b3eb1" name="RewardPerson">
+        <properties>
+          <domainCommandHasProperties Id="cf5e1681-8e0b-49e0-ace4-2ae73d2605da">
+            <property Id="522af0be-59d6-400d-bf62-e68393574bf4" order="1" name="Id" type="Guid" description="The unique id for the person" />
+          </domainCommandHasProperties>
+          <domainCommandHasProperties Id="e8aa76ad-888f-49d5-ba20-97c818cfe8c3">
+            <property Id="8497bf3b-0bbc-460a-a7d3-2b7cd0fa6af0" order="2" name="BonusAmount" type="float" description="The bonus amount" />
+          </domainCommandHasProperties>
+        </properties>
+      </domainCommand>
+    </boundedContextHasDomainCommands>
+  </domainCommands>
+  <views>
+    <boundedContextHasViews Id="5dd21bbf-2bc5-4bd0-af54-f14a37411ad2">
+      <view Id="5194b8d0-42cd-43d7-9117-ae90e98ea85c" name="PersonView" description="A view of a Person">
+        <properties>
+          <viewHasProperties Id="2e353008-562d-4603-849f-0f587507c52e">
+            <property Id="e3d5479f-81a7-4aab-9a87-e522e1cfcb8d" order="1" name="Id" type="Guid" description="The unique id for the person" />
+          </viewHasProperties>
+          <viewHasProperties Id="ec120520-eeaf-4688-ab63-284571dd363b">
+            <property Id="3a37d87d-9099-4763-89cb-72b0dc1ac8e2" order="2" name="FirstName" type="String" />
+          </viewHasProperties>
+          <viewHasProperties Id="965d628d-4030-4a62-97c8-a5766e669624">
+            <property Id="185b911d-b90c-4791-ba00-0f96342ea802" order="3" name="LastName" type="String" />
+          </viewHasProperties>
+          <viewHasProperties Id="6d29d0d5-1a91-40eb-b464-a2a1414a9b31">
+            <property Id="987b6d7d-376e-48fe-ba2b-d3386004d422" order="4" name="Salary" type="float" description="The person's salaray" />
+          </viewHasProperties>
+          <viewHasProperties Id="acc2ac12-9314-449f-95f6-e3632778c971">
+            <property Id="da1cd687-ad5e-4d79-b584-584e42f2a13f" order="5" name="Bonuses" type="List&lt;BonusReward&gt;" description="The list of bonuses" />
+          </viewHasProperties>
+        </properties>
+        <domainEvents>
+          <viewHasDomainEvents Id="a60e7029-c3f8-4a4c-830c-c64b2a9428fc">
+            <domainEvent Id="2ad0fcd9-aeb2-4dd3-842e-ee37f9723089" name="PersonCreated" />
+          </viewHasDomainEvents>
+          <viewHasDomainEvents Id="cb2c3ea6-e727-428c-a0cc-4fe1be4a349c">
+            <domainEvent Id="5339242e-14d4-45e2-85c9-250d47461511" name="PersonRewarded" />
+          </viewHasDomainEvents>
+        </domainEvents>
+      </view>
+    </boundedContextHasViews>
+  </views>
+  <domainEvents>
+    <boundedContextHasDomainEvents Id="18237a31-2f7b-4567-8a56-cf870d831899">
+      <domainEvent Id="fd49c688-7265-4507-afcb-aabf46b362d5" name="PersonCreated" description="A person was created">
+        <properties>
+          <domainEventHasProperties Id="9b662d22-b48b-41d1-bd6a-2a290f6464ef">
+            <property Id="e30f0776-ab75-41cb-934c-9f951f1d9dee" order="1" name="Id" type="Guid" description="The unique id for the person" />
+          </domainEventHasProperties>
+          <domainEventHasProperties Id="fdcfdaaa-ff0b-4a6f-b54a-d5df01f2e3b1">
+            <property Id="96583196-4eac-433f-ac4b-976f5f15de78" order="2" name="FirstName" type="String" />
+          </domainEventHasProperties>
+          <domainEventHasProperties Id="f4237b6d-5da8-46fd-b3c8-4e442c1ea90b">
+            <property Id="78778c4c-284a-4d9d-86e2-d837f91ef4ef" order="3" name="LastName" type="String" />
+          </domainEventHasProperties>
+          <domainEventHasProperties Id="b811a4c4-b9bf-4a2f-b135-05d6209f6a07">
+            <property Id="ced3a493-7319-4ff0-a87b-d5db61af2842" order="4" name="Salary" type="float" description="The person's salaray" />
+          </domainEventHasProperties>
+        </properties>
+      </domainEvent>
+    </boundedContextHasDomainEvents>
+    <boundedContextHasDomainEvents Id="3d3a324c-03be-4144-a339-9c7ecdc5721b">
+      <domainEvent Id="fc2d8994-e1f6-4fe3-ab18-6a3f2e5b745a" name="PersonRewarded" description="A person was rewarded">
+        <properties>
+          <domainEventHasProperties Id="a33746a0-d032-4607-921f-19407d54fbc6">
+            <property Id="56b3686e-b02c-4892-bc93-f6b2cd141f0c" order="1" name="Id" type="Guid" description="The unique id for the person" />
+          </domainEventHasProperties>
+          <domainEventHasProperties Id="969a3f9c-cc75-4921-ad7e-b8eca7f1be7f">
+            <property Id="a78e7704-b0d1-48ff-b70c-72a4b76fc38e" order="2" name="FirstName" type="String" />
+          </domainEventHasProperties>
+          <domainEventHasProperties Id="1e1397f5-0518-46cb-b0ff-c8d49aca3700">
+            <property Id="1d465fd5-9493-4d7a-b367-1cce09727c7a" order="3" name="LastName" type="String" />
+          </domainEventHasProperties>
+          <domainEventHasProperties Id="f7d3a3a8-8bd3-46a5-8196-18ca829ab324">
+            <property Id="1690ca3a-0edc-49a4-81d1-577945fbb57a" order="4" name="Salary" type="float" description="The person's salaray" />
+          </domainEventHasProperties>
+          <domainEventHasProperties Id="27785558-5657-4e19-8940-14aa715f5ef4">
+            <property Id="4176f195-5342-4d25-bbe4-5adbcc472685" order="5" name="BonusAmount" type="float" description="The bonus amount" />
+          </domainEventHasProperties>
+        </properties>
+      </domainEvent>
+    </boundedContextHasDomainEvents>
+  </domainEvents>
+  <entities>
+    <boundedContextHasEntities Id="3ba90d4c-14bc-41a1-b0f7-1a8fabb41597">
+      <entity Id="32eb0bc9-4250-4266-88df-08c337ca7448" name="BonusReward" description="Represents a bonus reward entity">
+        <properties>
+          <entityHasProperties Id="99c3cac2-cbc6-4270-90f8-6b60a653c544">
+            <property Id="b9345807-a146-4a07-8415-73370da6f2ae" order="1" name="BonusAmount" type="float" />
+          </entityHasProperties>
+          <entityHasProperties Id="8d1c2cce-ad11-4e0b-9046-b32417869ba1">
+            <property Id="4d81378f-0358-4703-9f23-e05c8832ae2a" order="2" name="BonusDate" type="DateTime" description="The date the bonus is to be paid" />
+          </entityHasProperties>
+        </properties>
+      </entity>
+    </boundedContextHasEntities>
+  </entities>
+</boundedContext>

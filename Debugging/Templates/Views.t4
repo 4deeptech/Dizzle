@@ -1,0 +1,42 @@
+﻿namespace <#= this.BoundedContext.ModelNamespace #>.Views 
+{
+<#
+foreach (View element in this.BoundedContext.Views)
+{
+#>
+	/// <summary>
+	/// <#= element.Description #>
+	/// </summary>
+    public partial class <#= element.Name #>
+    {
+
+<#
+foreach (Property property in element.Properties)
+{
+#>
+		/// <summary>
+		/// <#= property.Description #>
+		/// </summary>
+		[DataMember(Order = <#= property.Order #>)] 
+        public <#= property.Type #> <#= property.Name #> { get; set; }
+
+<#    
+}
+#>
+		public <#= element.Name #>() 
+        {
+            
+        }
+
+        public <#= element.Name #>(<#BuildProperties(element.Properties);#>)
+        {
+            <#BuildConstructorProperties(element.Properties);#>
+        }
+        
+    }//end <#= element.Name #> class
+
+
+<#    
+	} 
+#>
+}//end namespace

@@ -1,0 +1,1463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FourDeep.Dizzle.DizzleDomainModel.Description" xml:space="preserve">
+    <value>Four Deep Dizzle is a DSL for Event Source based DDD with CQRS. It is mainly built to be used with the Lokad.Cqrs lean implementation.</value>
+    <comment>Description for DslLibrary &apos;Dizzle&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DizzleDomainModel.DisplayName" xml:space="preserve">
+    <value>Dizzle</value>
+    <comment>DisplayName for DslLibrary &apos;Dizzle&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContext.Description" xml:space="preserve">
+    <value>The root in which all other elements are embedded. Appears as a diagram.</value>
+    <comment>Description for DomainClass &apos;BoundedContext&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContext.DisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>DisplayName for DomainClass &apos;BoundedContext&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContext/ModelNamespace.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContext.Model Namespace</value>
+    <comment>Description for DomainProperty &apos;ModelNamespace&apos; on DomainClass &apos;BoundedContext&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContext/ModelNamespace.DisplayName" xml:space="preserve">
+    <value>Model Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;ModelNamespace&apos; on DomainClass &apos;BoundedContext&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRoot.Description" xml:space="preserve">
+    <value>Elements embedded in the model. Appear as boxes on the diagram.</value>
+    <comment>Description for DomainClass &apos;AggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRoot.DisplayName" xml:space="preserve">
+    <value>Aggregate Root</value>
+    <comment>DisplayName for DomainClass &apos;AggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRoot/Name.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRoot.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRoot/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRoot/Description.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRoot.Description</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;AggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRoot/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;AggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateState.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateState</value>
+    <comment>Description for DomainClass &apos;AggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateState.DisplayName" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>DisplayName for DomainClass &apos;AggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateState/Name.Description" xml:space="preserve">
+    <value>The name of the State object for the Aggregate Root</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateState/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateState/Description.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateState.Description</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;AggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateState/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;AggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommand.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommand</value>
+    <comment>Description for DomainClass &apos;DomainCommand&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommand.DisplayName" xml:space="preserve">
+    <value>Domain Command</value>
+    <comment>DisplayName for DomainClass &apos;DomainCommand&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommand/Name.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommand.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;DomainCommand&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommand/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;DomainCommand&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommand/Description.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommand.Description</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;DomainCommand&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommand/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;DomainCommand&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Property</value>
+    <comment>Description for DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property.DisplayName" xml:space="preserve">
+    <value>Property</value>
+    <comment>DisplayName for DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Order.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Property.Order</value>
+    <comment>Description for DomainProperty &apos;Order&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Order.DisplayName" xml:space="preserve">
+    <value>Order</value>
+    <comment>DisplayName for DomainProperty &apos;Order&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Name.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Property.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Type.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Property.Type</value>
+    <comment>Description for DomainProperty &apos;Type&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Type.DisplayName" xml:space="preserve">
+    <value>Type</value>
+    <comment>DisplayName for DomainProperty &apos;Type&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Namespace.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Property.Namespace</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Namespace.DisplayName" xml:space="preserve">
+    <value>Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Description.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Property.Description</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Property/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;Property&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.View.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.View</value>
+    <comment>Description for DomainClass &apos;View&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.View.DisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>DisplayName for DomainClass &apos;View&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.View/Name.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.View.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;View&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.View/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;View&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.View/Description.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.View.Description</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;View&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.View/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;View&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEvent.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEvent</value>
+    <comment>Description for DomainClass &apos;DomainEvent&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEvent.DisplayName" xml:space="preserve">
+    <value>Domain Event</value>
+    <comment>DisplayName for DomainClass &apos;DomainEvent&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEvent/Name.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEvent.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;DomainEvent&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEvent/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;DomainEvent&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEvent/Description.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEvent.Description</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;DomainEvent&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEvent/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;DomainEvent&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Entity.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Entity</value>
+    <comment>Description for DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Entity.DisplayName" xml:space="preserve">
+    <value>Entity</value>
+    <comment>DisplayName for DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Entity/Name.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Entity.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Entity/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Entity/Description.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.Entity.Description</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.Entity/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasAggregateRoot.Description" xml:space="preserve">
+    <value>Embedding relationship between the Model and Elements</value>
+    <comment>Description for DomainClass &apos;BoundedContextHasAggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasAggregateRoot.DisplayName" xml:space="preserve">
+    <value>Bounded Context Has Aggregate Root</value>
+    <comment>DisplayName for DomainClass &apos;BoundedContextHasAggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasAggregateRoot/BoundedContext.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasAggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasAggregateRoot/BoundedContext.DisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>DisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasAggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasAggregateRoot/BoundedContext.PropertyDisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>PropertyDisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasAggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasAggregateRoot/Element.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;BoundedContextHasAggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasAggregateRoot/Element.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;BoundedContextHasAggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasAggregateRoot/Element.PropertyDisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;BoundedContextHasAggregateRoot&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHasAggregateState.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootHasAggregateState</value>
+    <comment>Description for DomainClass &apos;AggregateRootHasAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHasAggregateState.DisplayName" xml:space="preserve">
+    <value>Aggregate Root Has Aggregate State</value>
+    <comment>DisplayName for DomainClass &apos;AggregateRootHasAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHasAggregateState/AggregateRoot.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootHasAggregateState.AggregateRoot</value>
+    <comment>Description for DomainRole &apos;AggregateRoot&apos; on DomainRelationship &apos;AggregateRootHasAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHasAggregateState/AggregateRoot.DisplayName" xml:space="preserve">
+    <value>Aggregate Root</value>
+    <comment>DisplayName for DomainRole &apos;AggregateRoot&apos; on DomainRelationship &apos;AggregateRootHasAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHasAggregateState/AggregateRoot.PropertyDisplayName" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AggregateRoot&apos; on DomainRelationship &apos;AggregateRootHasAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHasAggregateState/AggregateState.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootHasAggregateState.AggregateState</value>
+    <comment>Description for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateRootHasAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHasAggregateState/AggregateState.DisplayName" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>DisplayName for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateRootHasAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHasAggregateState/AggregateState.PropertyDisplayName" xml:space="preserve">
+    <value>Aggregate Root</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateRootHasAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextReferencesAggregateState.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextReferencesAggregateState</value>
+    <comment>Description for DomainClass &apos;BoundedContextReferencesAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextReferencesAggregateState.DisplayName" xml:space="preserve">
+    <value>Bounded Context References Aggregate State</value>
+    <comment>DisplayName for DomainClass &apos;BoundedContextReferencesAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextReferencesAggregateState/BoundedContext.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextReferencesAggregateState.BoundedContext</value>
+    <comment>Description for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextReferencesAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextReferencesAggregateState/BoundedContext.DisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>DisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextReferencesAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextReferencesAggregateState/BoundedContext.PropertyDisplayName" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>PropertyDisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextReferencesAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextReferencesAggregateState/AggregateState.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextReferencesAggregateState.AggregateState</value>
+    <comment>Description for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;BoundedContextReferencesAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextReferencesAggregateState/AggregateState.DisplayName" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>DisplayName for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;BoundedContextReferencesAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextReferencesAggregateState/AggregateState.PropertyDisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;BoundedContextReferencesAggregateState&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHandlesDomainCommands.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootHandlesDomainCommands</value>
+    <comment>Description for DomainClass &apos;AggregateRootHandlesDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHandlesDomainCommands.DisplayName" xml:space="preserve">
+    <value>Aggregate Root Handles Domain Commands</value>
+    <comment>DisplayName for DomainClass &apos;AggregateRootHandlesDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHandlesDomainCommands/AggregateRoot.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootHandlesDomainCommands.AggregateRoot</value>
+    <comment>Description for DomainRole &apos;AggregateRoot&apos; on DomainRelationship &apos;AggregateRootHandlesDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHandlesDomainCommands/AggregateRoot.DisplayName" xml:space="preserve">
+    <value>Aggregate Root</value>
+    <comment>DisplayName for DomainRole &apos;AggregateRoot&apos; on DomainRelationship &apos;AggregateRootHandlesDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHandlesDomainCommands/AggregateRoot.PropertyDisplayName" xml:space="preserve">
+    <value>Domain Commands</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AggregateRoot&apos; on DomainRelationship &apos;AggregateRootHandlesDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHandlesDomainCommands/DomainCommand.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootHandlesDomainCommands.DomainCommand</value>
+    <comment>Description for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;AggregateRootHandlesDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHandlesDomainCommands/DomainCommand.DisplayName" xml:space="preserve">
+    <value>Domain Command</value>
+    <comment>DisplayName for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;AggregateRootHandlesDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootHandlesDomainCommands/DomainCommand.PropertyDisplayName" xml:space="preserve">
+    <value>Aggregate Root</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;AggregateRootHandlesDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainCommands.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasDomainCommands</value>
+    <comment>Description for DomainClass &apos;BoundedContextHasDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainCommands.DisplayName" xml:space="preserve">
+    <value>Bounded Context Has Domain Commands</value>
+    <comment>DisplayName for DomainClass &apos;BoundedContextHasDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainCommands/BoundedContext.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasDomainCommands.BoundedContext</value>
+    <comment>Description for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainCommands/BoundedContext.DisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>DisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainCommands/BoundedContext.PropertyDisplayName" xml:space="preserve">
+    <value>Domain Commands</value>
+    <comment>PropertyDisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainCommands/DomainCommand.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasDomainCommands.DomainCommand</value>
+    <comment>Description for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;BoundedContextHasDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainCommands/DomainCommand.DisplayName" xml:space="preserve">
+    <value>Domain Command</value>
+    <comment>DisplayName for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;BoundedContextHasDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainCommands/DomainCommand.PropertyDisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;BoundedContextHasDomainCommands&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasProperties.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasProperties</value>
+    <comment>Description for DomainClass &apos;BoundedContextHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasProperties.DisplayName" xml:space="preserve">
+    <value>Bounded Context Has Properties</value>
+    <comment>DisplayName for DomainClass &apos;BoundedContextHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasProperties/BoundedContext.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasProperties.BoundedContext</value>
+    <comment>Description for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasProperties/BoundedContext.DisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>DisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasProperties/BoundedContext.PropertyDisplayName" xml:space="preserve">
+    <value>Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasProperties/Property.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasProperties.Property</value>
+    <comment>Description for DomainRole &apos;Property&apos; on DomainRelationship &apos;BoundedContextHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasProperties/Property.DisplayName" xml:space="preserve">
+    <value>Property</value>
+    <comment>DisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;BoundedContextHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasProperties/Property.PropertyDisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;BoundedContextHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasViews.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasViews</value>
+    <comment>Description for DomainClass &apos;BoundedContextHasViews&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasViews.DisplayName" xml:space="preserve">
+    <value>Bounded Context Has Views</value>
+    <comment>DisplayName for DomainClass &apos;BoundedContextHasViews&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasViews/BoundedContext.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasViews.BoundedContext</value>
+    <comment>Description for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasViews&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasViews/BoundedContext.DisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>DisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasViews&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasViews/BoundedContext.PropertyDisplayName" xml:space="preserve">
+    <value>Views</value>
+    <comment>PropertyDisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasViews&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasViews/View.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasViews.View</value>
+    <comment>Description for DomainRole &apos;View&apos; on DomainRelationship &apos;BoundedContextHasViews&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasViews/View.DisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>DisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;BoundedContextHasViews&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasViews/View.PropertyDisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>PropertyDisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;BoundedContextHasViews&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainEvents.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasDomainEvents</value>
+    <comment>Description for DomainClass &apos;BoundedContextHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainEvents.DisplayName" xml:space="preserve">
+    <value>Bounded Context Has Domain Events</value>
+    <comment>DisplayName for DomainClass &apos;BoundedContextHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainEvents/BoundedContext.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasDomainEvents.BoundedContext</value>
+    <comment>Description for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainEvents/BoundedContext.DisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>DisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainEvents/BoundedContext.PropertyDisplayName" xml:space="preserve">
+    <value>Domain Events</value>
+    <comment>PropertyDisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainEvents/DomainEvent.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasDomainEvents.DomainEvent</value>
+    <comment>Description for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;BoundedContextHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainEvents/DomainEvent.DisplayName" xml:space="preserve">
+    <value>Domain Event</value>
+    <comment>DisplayName for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;BoundedContextHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasDomainEvents/DomainEvent.PropertyDisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;BoundedContextHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents</value>
+    <comment>Description for DomainClass &apos;AggregateStateSubscribesToDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents.DisplayName" xml:space="preserve">
+    <value>Aggregate State Subscribes To Domain Events</value>
+    <comment>DisplayName for DomainClass &apos;AggregateStateSubscribesToDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents/AggregateState.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents.AggregateState</value>
+    <comment>Description for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateStateSubscribesToDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents/AggregateState.DisplayName" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>DisplayName for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateStateSubscribesToDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents/AggregateState.PropertyDisplayName" xml:space="preserve">
+    <value>Domain Events</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateStateSubscribesToDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents/DomainEvent.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents.DomainEvent</value>
+    <comment>Description for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;AggregateStateSubscribesToDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents/DomainEvent.DisplayName" xml:space="preserve">
+    <value>Domain Event</value>
+    <comment>DisplayName for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;AggregateStateSubscribesToDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents/DomainEvent.PropertyDisplayName" xml:space="preserve">
+    <value>Aggregate States</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;AggregateStateSubscribesToDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateHasProperties.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateHasProperties</value>
+    <comment>Description for DomainClass &apos;AggregateStateHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateHasProperties.DisplayName" xml:space="preserve">
+    <value>Aggregate State Has Properties</value>
+    <comment>DisplayName for DomainClass &apos;AggregateStateHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateHasProperties/AggregateState.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateHasProperties.AggregateState</value>
+    <comment>Description for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateStateHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateHasProperties/AggregateState.DisplayName" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>DisplayName for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateStateHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateHasProperties/AggregateState.PropertyDisplayName" xml:space="preserve">
+    <value>Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AggregateState&apos; on DomainRelationship &apos;AggregateStateHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateHasProperties/Property.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateHasProperties.Property</value>
+    <comment>Description for DomainRole &apos;Property&apos; on DomainRelationship &apos;AggregateStateHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateHasProperties/Property.DisplayName" xml:space="preserve">
+    <value>Property</value>
+    <comment>DisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;AggregateStateHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateHasProperties/Property.PropertyDisplayName" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;AggregateStateHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandHasProperties.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommandHasProperties</value>
+    <comment>Description for DomainClass &apos;DomainCommandHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandHasProperties.DisplayName" xml:space="preserve">
+    <value>Domain Command Has Properties</value>
+    <comment>DisplayName for DomainClass &apos;DomainCommandHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandHasProperties/DomainCommand.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommandHasProperties.DomainCommand</value>
+    <comment>Description for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;DomainCommandHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandHasProperties/DomainCommand.DisplayName" xml:space="preserve">
+    <value>Domain Command</value>
+    <comment>DisplayName for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;DomainCommandHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandHasProperties/DomainCommand.PropertyDisplayName" xml:space="preserve">
+    <value>Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DomainCommand&apos; on DomainRelationship &apos;DomainCommandHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandHasProperties/Property.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommandHasProperties.Property</value>
+    <comment>Description for DomainRole &apos;Property&apos; on DomainRelationship &apos;DomainCommandHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandHasProperties/Property.DisplayName" xml:space="preserve">
+    <value>Property</value>
+    <comment>DisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;DomainCommandHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandHasProperties/Property.PropertyDisplayName" xml:space="preserve">
+    <value>Domain Command</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;DomainCommandHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventHasProperties.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEventHasProperties</value>
+    <comment>Description for DomainClass &apos;DomainEventHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventHasProperties.DisplayName" xml:space="preserve">
+    <value>Domain Event Has Properties</value>
+    <comment>DisplayName for DomainClass &apos;DomainEventHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventHasProperties/DomainEvent.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEventHasProperties.DomainEvent</value>
+    <comment>Description for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;DomainEventHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventHasProperties/DomainEvent.DisplayName" xml:space="preserve">
+    <value>Domain Event</value>
+    <comment>DisplayName for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;DomainEventHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventHasProperties/DomainEvent.PropertyDisplayName" xml:space="preserve">
+    <value>Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;DomainEventHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventHasProperties/Property.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEventHasProperties.Property</value>
+    <comment>Description for DomainRole &apos;Property&apos; on DomainRelationship &apos;DomainEventHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventHasProperties/Property.DisplayName" xml:space="preserve">
+    <value>Property</value>
+    <comment>DisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;DomainEventHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventHasProperties/Property.PropertyDisplayName" xml:space="preserve">
+    <value>Domain Event</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;DomainEventHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityHasProperties.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.EntityHasProperties</value>
+    <comment>Description for DomainClass &apos;EntityHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityHasProperties.DisplayName" xml:space="preserve">
+    <value>Entity Has Properties</value>
+    <comment>DisplayName for DomainClass &apos;EntityHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityHasProperties/Entity.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.EntityHasProperties.Entity</value>
+    <comment>Description for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityHasProperties/Entity.DisplayName" xml:space="preserve">
+    <value>Entity</value>
+    <comment>DisplayName for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityHasProperties/Entity.PropertyDisplayName" xml:space="preserve">
+    <value>Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityHasProperties/Property.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.EntityHasProperties.Property</value>
+    <comment>Description for DomainRole &apos;Property&apos; on DomainRelationship &apos;EntityHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityHasProperties/Property.DisplayName" xml:space="preserve">
+    <value>Property</value>
+    <comment>DisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;EntityHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityHasProperties/Property.PropertyDisplayName" xml:space="preserve">
+    <value>Entity</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;EntityHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasEntities.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasEntities</value>
+    <comment>Description for DomainClass &apos;BoundedContextHasEntities&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasEntities.DisplayName" xml:space="preserve">
+    <value>Bounded Context Has Entities</value>
+    <comment>DisplayName for DomainClass &apos;BoundedContextHasEntities&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasEntities/BoundedContext.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasEntities.BoundedContext</value>
+    <comment>Description for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasEntities&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasEntities/BoundedContext.DisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>DisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasEntities&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasEntities/BoundedContext.PropertyDisplayName" xml:space="preserve">
+    <value>Entities</value>
+    <comment>PropertyDisplayName for DomainRole &apos;BoundedContext&apos; on DomainRelationship &apos;BoundedContextHasEntities&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasEntities/Entity.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.BoundedContextHasEntities.Entity</value>
+    <comment>Description for DomainRole &apos;Entity&apos; on DomainRelationship &apos;BoundedContextHasEntities&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasEntities/Entity.DisplayName" xml:space="preserve">
+    <value>Entity</value>
+    <comment>DisplayName for DomainRole &apos;Entity&apos; on DomainRelationship &apos;BoundedContextHasEntities&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.BoundedContextHasEntities/Entity.PropertyDisplayName" xml:space="preserve">
+    <value>Bounded Context</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entity&apos; on DomainRelationship &apos;BoundedContextHasEntities&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasProperties.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewHasProperties</value>
+    <comment>Description for DomainClass &apos;ViewHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasProperties.DisplayName" xml:space="preserve">
+    <value>View Has Properties</value>
+    <comment>DisplayName for DomainClass &apos;ViewHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasProperties/View.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewHasProperties.View</value>
+    <comment>Description for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasProperties/View.DisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>DisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasProperties/View.PropertyDisplayName" xml:space="preserve">
+    <value>Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasProperties/Property.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewHasProperties.Property</value>
+    <comment>Description for DomainRole &apos;Property&apos; on DomainRelationship &apos;ViewHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasProperties/Property.DisplayName" xml:space="preserve">
+    <value>Property</value>
+    <comment>DisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;ViewHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasProperties/Property.PropertyDisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;ViewHasProperties&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasDomainEvents.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewHasDomainEvents</value>
+    <comment>Description for DomainClass &apos;ViewHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasDomainEvents.DisplayName" xml:space="preserve">
+    <value>View Has Domain Events</value>
+    <comment>DisplayName for DomainClass &apos;ViewHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasDomainEvents/View.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewHasDomainEvents.View</value>
+    <comment>Description for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasDomainEvents/View.DisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>DisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasDomainEvents/View.PropertyDisplayName" xml:space="preserve">
+    <value>Domain Events</value>
+    <comment>PropertyDisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasDomainEvents/DomainEvent.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewHasDomainEvents.DomainEvent</value>
+    <comment>Description for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;ViewHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasDomainEvents/DomainEvent.DisplayName" xml:space="preserve">
+    <value>Domain Event</value>
+    <comment>DisplayName for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;ViewHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewHasDomainEvents/DomainEvent.PropertyDisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DomainEvent&apos; on DomainRelationship &apos;ViewHasDomainEvents&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootShape.Description" xml:space="preserve">
+    <value>Shape used to represent ExampleElements on a Diagram.</value>
+    <comment>Description for DomainClass &apos;AggregateRootShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootShape.DisplayName" xml:space="preserve">
+    <value>Aggregate Root Shape</value>
+    <comment>DisplayName for DomainClass &apos;AggregateRootShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootShape/FillColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootShape.Fill Color</value>
+    <comment>Description for DomainProperty &apos;FillColor&apos; on DomainClass &apos;AggregateRootShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootShape/FillColor.DisplayName" xml:space="preserve">
+    <value>Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;FillColor&apos; on DomainClass &apos;AggregateRootShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootShape/TextColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootShape.Text Color</value>
+    <comment>Description for DomainProperty &apos;TextColor&apos; on DomainClass &apos;AggregateRootShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootShape/TextColor.DisplayName" xml:space="preserve">
+    <value>Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TextColor&apos; on DomainClass &apos;AggregateRootShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootShape/FillGradientMode.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateRootShape.Fill Gradient Mode</value>
+    <comment>Description for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;AggregateRootShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateRootShape/FillGradientMode.DisplayName" xml:space="preserve">
+    <value>Fill Gradient Mode</value>
+    <comment>DisplayName for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;AggregateRootShape&apos;</comment>
+  </data>
+  <data name="AggregateRootShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="AggregateRootShapeDescriptionDecoratorDefaultText" xml:space="preserve">
+    <value>Enter Description Here</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FourDeep.Dizzle.PropertyShape.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.PropertyShape</value>
+    <comment>Description for DomainClass &apos;PropertyShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.PropertyShape.DisplayName" xml:space="preserve">
+    <value>Property Shape</value>
+    <comment>DisplayName for DomainClass &apos;PropertyShape&apos;</comment>
+  </data>
+  <data name="PropertyShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="PropertyShapeOrderDecoratorDefaultText" xml:space="preserve">
+    <value>OrderDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="PropertyShapeTypeDecoratorDefaultText" xml:space="preserve">
+    <value>TypeDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="PropertyShapeNamespaceDecoratorDefaultText" xml:space="preserve">
+    <value>NamespaceDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="PropertyShapeDescriptionDecoratorDefaultText" xml:space="preserve">
+    <value>DescriptionDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateShape.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateShape</value>
+    <comment>Description for DomainClass &apos;AggregateStateShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateShape.DisplayName" xml:space="preserve">
+    <value>Aggregate State Shape</value>
+    <comment>DisplayName for DomainClass &apos;AggregateStateShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateShape/FillColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateShape.Fill Color</value>
+    <comment>Description for DomainProperty &apos;FillColor&apos; on DomainClass &apos;AggregateStateShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateShape/FillColor.DisplayName" xml:space="preserve">
+    <value>Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;FillColor&apos; on DomainClass &apos;AggregateStateShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateShape/TextColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateShape.Text Color</value>
+    <comment>Description for DomainProperty &apos;TextColor&apos; on DomainClass &apos;AggregateStateShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateShape/TextColor.DisplayName" xml:space="preserve">
+    <value>Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TextColor&apos; on DomainClass &apos;AggregateStateShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateShape/FillGradientMode.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateShape.Fill Gradient Mode</value>
+    <comment>Description for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;AggregateStateShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateShape/FillGradientMode.DisplayName" xml:space="preserve">
+    <value>Fill Gradient Mode</value>
+    <comment>DisplayName for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;AggregateStateShape&apos;</comment>
+  </data>
+  <data name="AggregateStateShapePropertiesTitle" xml:space="preserve">
+    <value>Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="AggregateStateShapeStateNameDecoratorDefaultText" xml:space="preserve">
+    <value>StateNameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="AggregateStateShapeDescriptionDecoratorDefaultText" xml:space="preserve">
+    <value>DescriptionDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandShape.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommandShape</value>
+    <comment>Description for DomainClass &apos;DomainCommandShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandShape.DisplayName" xml:space="preserve">
+    <value>Domain Command Shape</value>
+    <comment>DisplayName for DomainClass &apos;DomainCommandShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandShape/FillColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommandShape.Fill Color</value>
+    <comment>Description for DomainProperty &apos;FillColor&apos; on DomainClass &apos;DomainCommandShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandShape/FillColor.DisplayName" xml:space="preserve">
+    <value>Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;FillColor&apos; on DomainClass &apos;DomainCommandShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandShape/TextColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommandShape.Text Color</value>
+    <comment>Description for DomainProperty &apos;TextColor&apos; on DomainClass &apos;DomainCommandShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandShape/TextColor.DisplayName" xml:space="preserve">
+    <value>Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TextColor&apos; on DomainClass &apos;DomainCommandShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandShape/FillGradientMode.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommandShape.Fill Gradient Mode</value>
+    <comment>Description for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;DomainCommandShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommandShape/FillGradientMode.DisplayName" xml:space="preserve">
+    <value>Fill Gradient Mode</value>
+    <comment>DisplayName for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;DomainCommandShape&apos;</comment>
+  </data>
+  <data name="DomainCommandShapePropertiesTitle" xml:space="preserve">
+    <value>Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="DomainCommandShapeCommandNameDecoratorDefaultText" xml:space="preserve">
+    <value>CommandNameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="DomainCommandShapeDescriptionDecoratorDefaultText" xml:space="preserve">
+    <value>DescriptionDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventShape.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEventShape</value>
+    <comment>Description for DomainClass &apos;DomainEventShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventShape.DisplayName" xml:space="preserve">
+    <value>Domain Event Shape</value>
+    <comment>DisplayName for DomainClass &apos;DomainEventShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventShape/FillColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEventShape.Fill Color</value>
+    <comment>Description for DomainProperty &apos;FillColor&apos; on DomainClass &apos;DomainEventShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventShape/FillColor.DisplayName" xml:space="preserve">
+    <value>Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;FillColor&apos; on DomainClass &apos;DomainEventShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventShape/TextColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEventShape.Text Color</value>
+    <comment>Description for DomainProperty &apos;TextColor&apos; on DomainClass &apos;DomainEventShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventShape/TextColor.DisplayName" xml:space="preserve">
+    <value>Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TextColor&apos; on DomainClass &apos;DomainEventShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventShape/FillGradientMode.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEventShape.Fill Gradient Mode</value>
+    <comment>Description for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;DomainEventShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventShape/FillGradientMode.DisplayName" xml:space="preserve">
+    <value>Fill Gradient Mode</value>
+    <comment>DisplayName for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;DomainEventShape&apos;</comment>
+  </data>
+  <data name="DomainEventShapePropertiesTitle" xml:space="preserve">
+    <value>Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="DomainEventShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="DomainEventShapeDescriptionDecoratorDefaultText" xml:space="preserve">
+    <value>DescriptionDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityShape.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.EntityShape</value>
+    <comment>Description for DomainClass &apos;EntityShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityShape.DisplayName" xml:space="preserve">
+    <value>Entity Shape</value>
+    <comment>DisplayName for DomainClass &apos;EntityShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityShape/FillColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.EntityShape.Fill Color</value>
+    <comment>Description for DomainProperty &apos;FillColor&apos; on DomainClass &apos;EntityShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityShape/FillColor.DisplayName" xml:space="preserve">
+    <value>Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;FillColor&apos; on DomainClass &apos;EntityShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityShape/FillGradientMode.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.EntityShape.Fill Gradient Mode</value>
+    <comment>Description for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;EntityShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityShape/FillGradientMode.DisplayName" xml:space="preserve">
+    <value>Fill Gradient Mode</value>
+    <comment>DisplayName for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;EntityShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityShape/TextColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.EntityShape.Text Color</value>
+    <comment>Description for DomainProperty &apos;TextColor&apos; on DomainClass &apos;EntityShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.EntityShape/TextColor.DisplayName" xml:space="preserve">
+    <value>Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TextColor&apos; on DomainClass &apos;EntityShape&apos;</comment>
+  </data>
+  <data name="EntityShapePropertiesTitle" xml:space="preserve">
+    <value>Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="EntityShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="EntityShapeDescriptionDecoratorDefaultText" xml:space="preserve">
+    <value>Enter Description Here</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewShape.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewShape</value>
+    <comment>Description for DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewShape.DisplayName" xml:space="preserve">
+    <value>View Shape</value>
+    <comment>DisplayName for DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewShape/FillColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewShape.Fill Color</value>
+    <comment>Description for DomainProperty &apos;FillColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewShape/FillColor.DisplayName" xml:space="preserve">
+    <value>Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;FillColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewShape/TextColor.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewShape.Text Color</value>
+    <comment>Description for DomainProperty &apos;TextColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewShape/TextColor.DisplayName" xml:space="preserve">
+    <value>Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TextColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewShape/FillGradientMode.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.ViewShape.Fill Gradient Mode</value>
+    <comment>Description for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.ViewShape/FillGradientMode.DisplayName" xml:space="preserve">
+    <value>Fill Gradient Mode</value>
+    <comment>DisplayName for DomainProperty &apos;FillGradientMode&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="ViewShapePropertiesTitle" xml:space="preserve">
+    <value>Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ViewShapeEventsTitle" xml:space="preserve">
+    <value>Events</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ViewShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ViewShapeDescriptionDecoratorDefaultText" xml:space="preserve">
+    <value>DescriptionDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FourDeep.Dizzle.CommandConnector.Description" xml:space="preserve">
+    <value>Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram.</value>
+    <comment>Description for DomainClass &apos;CommandConnector&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.CommandConnector.DisplayName" xml:space="preserve">
+    <value>Command Connector</value>
+    <comment>DisplayName for DomainClass &apos;CommandConnector&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateConnector.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.AggregateStateConnector</value>
+    <comment>Description for DomainClass &apos;AggregateStateConnector&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.AggregateStateConnector.DisplayName" xml:space="preserve">
+    <value>Aggregate State Connector</value>
+    <comment>DisplayName for DomainClass &apos;AggregateStateConnector&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.PropertyConnector.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.PropertyConnector</value>
+    <comment>Description for DomainClass &apos;PropertyConnector&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.PropertyConnector.DisplayName" xml:space="preserve">
+    <value>Property Connector</value>
+    <comment>DisplayName for DomainClass &apos;PropertyConnector&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventConnector.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainEventConnector</value>
+    <comment>Description for DomainClass &apos;DomainEventConnector&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainEventConnector.DisplayName" xml:space="preserve">
+    <value>Domain Event Connector</value>
+    <comment>DisplayName for DomainClass &apos;DomainEventConnector&apos;</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>Dizzle (*.4dizzle)|*.4dizzle</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>Dizzle Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DizzleDiagram.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DizzleDiagram</value>
+    <comment>Description for DomainClass &apos;DizzleDiagram&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DizzleDiagram.DisplayName" xml:space="preserve">
+    <value>Minimal Language Diagram</value>
+    <comment>DisplayName for DomainClass &apos;DizzleDiagram&apos;</comment>
+  </data>
+  <data name="DizzleToolboxTab" xml:space="preserve">
+    <value>Dizzle</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="AggregateRootToolboxItem" xml:space="preserve">
+    <value>AggregateRoot</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AggregateRootToolboxTooltip" xml:space="preserve">
+    <value>Create an AggregateRoot</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CommandRelationshipToolboxItem" xml:space="preserve">
+    <value>CommandRelationship</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CommandRelationshipToolboxTooltip" xml:space="preserve">
+    <value>Command Relationship</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AggregateStateToolboxItem" xml:space="preserve">
+    <value>AggregateState</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AggregateStateToolboxTooltip" xml:space="preserve">
+    <value>Aggregate State</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="DomainCommandToolboxItem" xml:space="preserve">
+    <value>DomainCommand</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="DomainCommandToolboxTooltip" xml:space="preserve">
+    <value>Domain Command</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AggregateStateRelationshipToolboxItem" xml:space="preserve">
+    <value>AggregateStateRelationship</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AggregateStateRelationshipToolboxTooltip" xml:space="preserve">
+    <value>Aggregate State Relationship</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="PropertyToolboxItem" xml:space="preserve">
+    <value>Property</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="PropertyToolboxTooltip" xml:space="preserve">
+    <value>Property</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="DomainEventToolboxItem" xml:space="preserve">
+    <value>DomainEvent</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="DomainEventToolboxTooltip" xml:space="preserve">
+    <value>Domain Event</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EventRelationshipToolboxItem" xml:space="preserve">
+    <value>EventRelationship</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EventRelationshipToolboxTooltip" xml:space="preserve">
+    <value>Event Relationship</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ViewToolboxItem" xml:space="preserve">
+    <value>View</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ViewToolboxTooltip" xml:space="preserve">
+    <value>View</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EntityToolboxItem" xml:space="preserve">
+    <value>Entity</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EntityToolboxTooltip" xml:space="preserve">
+    <value>Entity</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AggregateRootToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CommandRelationshipToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CommandRelationshipSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="CommandRelationshipTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AggregateStateToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="DomainCommandToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AggregateStateRelationshipToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AggregateStateRelationshipSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AggregateStateRelationshipTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="PropertyToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="DomainEventToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EventRelationshipToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EventRelationshipSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="EventRelationshipTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="ViewToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\view.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EntityToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+

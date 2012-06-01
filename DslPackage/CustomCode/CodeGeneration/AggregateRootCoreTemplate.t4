@@ -1,0 +1,309 @@
+﻿<#@ assembly name="FourDeep.Dizzle.DslPackage.dll" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.Linq" #>
+<#@ import namespace="Debugging" #>
+<#@ template inherits="EventSourcingModelTextTransformation" #> 
+<#@ output extension=".generated.cs" #>
+<#@ Dizzle processor="DizzleDirectiveProcessor" requires="fileName='MyAggregateName.4dizzle'" #>
+
+#region (c) 2012 4Deep Technologies LLC
+
+// Copyright (c) 4Deep Technologies LLC 2012 (http://www.4deeptech.com)
+// Created by Darren Ford
+// Based on code by Rinat Abdullin of Lokad (http://www.lokad.com)
+
+//Generated using 4Dizzle DSL Model and Code Generator
+//see http://www.4deeptech.com/blog/post/2012/02/16/Creating-a-DSL-for-DDD-and-Event-Sourcing-Code-Generation.aspx
+#endregion
+ 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Reflection;
+using System.Runtime.Serialization;
+using ProtoBuf;
+using Lokad.Cqrs;
+using Context;
+using <#= this.BoundedContext.ModelNamespace #>.Contracts; 
+using <#= this.BoundedContext.ModelNamespace #>.Events;
+using <#= this.BoundedContext.ModelNamespace #>.Commands;
+using <#= this.BoundedContext.ModelNamespace #>.Model; 
+using Ranken.Domain;
+
+namespace <#= this.BoundedContext.ModelNamespace #>.Model
+{
+	/// <summary>
+	/// <#=GetAggregateRootDescription(this.BoundedContext)#>
+	/// </summary> 
+	public partial class <#= this.BoundedContext.Element.Name #> : IAggregate<<#=GetAggregateStateIdType(this.BoundedContext)#>>, I<#= this.BoundedContext.Element.Name #>
+	{
+		readonly <#=GetAggregateStateName(this.BoundedContext)#> _state;
+        readonly Action<IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>>> _observer;
+        private readonly MyMessageContext _context;
+		readonly Repository _repository;
+
+		public <#=GetAggregateRootName(this.BoundedContext)#>(<#=GetAggregateStateName(this.BoundedContext)#> state, Action<IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>>> observer,Repository repository, MyMessageContext context)
+        {
+            _state = state;
+            _observer = observer;
+			_context = context;
+			_repository = repository;
+        }
+
+		public void Execute(ICommand<<#=GetAggregateStateIdType(this.BoundedContext)#>> c)
+        {
+            ThrowOnInvalidStateTransition(c);
+
+            RedirectToWhen.InvokeCommand(this, c);
+        }
+
+        void Apply(IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>> e)
+        {
+            _state.Apply(e);
+            _observer(e);
+        }
+
+	}//end aggregateroot
+
+	/// <summary>
+	/// <#=GetAggregateStateDescription(this.BoundedContext)#>
+	/// </summary> 
+
+	[DataContract]
+    public partial class <#= this.BoundedContext.Element.AggregateState.Name #> : IAggregateState, I<#= this.BoundedContext.Element.AggregateState.Name #>
+    {
+
+<#
+foreach (Property property in this.BoundedContext.Element.AggregateState.Properties.ToArray().AsQueryable().OrderBy(tmp=>tmp.Order))
+{
+#>
+		/// <summary>
+		/// <#= property.Description #>
+		/// </summary>
+		[DataMember(Order = <#= property.Order #>)]
+        public <#= property.Type #> <#= property.Name #> { get; internal set; }
+
+<#    
+}
+#>
+        
+		public <#= this.BoundedContext.Element.AggregateState.Name #>(IEnumerable<IEvent<IIdentity>> events)
+        {
+            foreach (var e in events)
+            {
+                Apply(e);
+            }
+        }
+
+		public int Version { get; private set; }
+
+		public void Apply(IEvent<IIdentity> e)
+        {
+            Version += 1;
+            RedirectToWhen.InvokeEventOptional(this, e);
+        }
+
+    }//end aggregate state
+
+	#region Aggregate and AggregateState interfaces
+
+	/// <summary> 
+	/// <#= this.BoundedContext.Element.Name #> command interface
+	/// </summary> 
+	public interface I<#= this.BoundedContext.Element.Name #>
+    {
+		<#BuildCommandInterfaceMethods(this.BoundedContext);#>
+    }
+    
+
+	/// <summary>
+	/// <#= this.BoundedContext.Element.AggregateState.Name #> event interface
+	/// </summary> 
+
+    public interface I<#= this.BoundedContext.Element.AggregateState.Name #>
+    {
+		<#BuildEventInterfaceMethods(this.BoundedContext);#>
+    }
+
+	#endregion	 
+
+	#region entities
+<#
+foreach (Entity ent in this.BoundedContext.Entities) 
+{
+#>
+	[DataContract]
+	public partial class <#=ent.Name #>
+	{
+<#
+foreach (Property property in ent.Properties.ToArray().AsQueryable().OrderBy(tmp=>tmp.Order))
+{
+#>
+		/// <summary>
+		/// <#= property.Description #> 
+		/// </summary>
+		[DataMember(Order = <#= property.Order #>)]
+        public <#= property.Type #> <#= property.Name #> { get; set; }
+
+<#    
+}
+#>		
+		public <#=ent.Name #>()
+		{
+		}
+
+		public <#=ent.Name #>(<#BuildProperties(ent.Properties);#>) 
+		{
+			<#BuildConstructorProperties(ent.Properties);#>
+		}
+
+	}
+<#    
+}
+#>
+	#endregion
+}	
+
+namespace <#= this.BoundedContext.ModelNamespace #>.Commands 
+{
+<#
+foreach (DomainCommand element in this.BoundedContext.Element.DomainCommands)
+{
+#>
+	/// <summary>
+	/// <#= element.Description #>
+	/// </summary>
+	[DataContract(Namespace = "<#= this.BoundedContext.ModelNamespace #>")]
+    public partial class <#= element.Name #> : ICommand<<#=GetAggregateStateIdType(this.BoundedContext)#>>
+    {
+
+<#
+foreach (Property property in element.Properties)
+{
+#>
+		/// <summary>
+		/// <#= property.Description #>
+		/// </summary>
+		[DataMember(Order = <#= property.Order #>)] 
+        public <#= property.Type #> <#= property.Name #> { get; private set; }
+
+<#    
+}
+#>
+		public <#= element.Name #>() 
+        {
+            
+        }
+
+        public <#= element.Name #>(<#BuildProperties(element.Properties);#>)
+        {
+            <#BuildConstructorProperties(element.Properties);#>
+        }
+
+        public override string ToString()
+        {
+            return <#= BuildPropertiesToString(element.Properties)#>;
+        }
+    }//end <#= element.Name #> class
+
+
+<#    
+	} 
+#>
+}//end namespace
+
+namespace <#= this.BoundedContext.ModelNamespace #>.Events
+{
+<#
+foreach (DomainEvent element in this.BoundedContext.Element.AggregateState.DomainEvents)
+{
+#>
+	/// <summary>
+	/// <#= element.Description #>
+	/// </summary>
+	[DataContract(Namespace = "<#= this.BoundedContext.ModelNamespace #>")]
+    public partial class <#= element.Name #> : IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>>
+    {
+
+<#
+foreach (Property property in element.Properties)
+{
+#>
+		/// <summary>
+		/// <#= property.Description #>
+		/// </summary>
+		[DataMember(Order = <#= property.Order #>)] 
+        public <#= property.Type #> <#= property.Name #> { get; private set; }
+
+<#    
+}
+#>
+		public <#= element.Name #>() 
+        {
+            
+        }
+
+        public <#= element.Name #>(<#BuildProperties(element.Properties);#>)
+        {
+            <#BuildConstructorProperties(element.Properties);#>
+        }
+
+        public override string ToString()
+        {
+            return <#= BuildPropertiesToString(element.Properties)#>;
+        }
+    }//end <#= element.Name #> class
+
+
+<#    
+	} 
+#>
+}//end namespace
+
+namespace <#= this.BoundedContext.ModelNamespace #>.Views 
+{
+<#
+foreach (View element in this.BoundedContext.Views)
+{
+#>
+	/// <summary>
+	/// <#= element.Description #>
+	/// </summary>
+    public partial class <#= element.Name #>
+    {
+
+<#
+foreach (Property property in element.Properties)
+{
+#>
+		/// <summary>
+		/// <#= property.Description #>
+		/// </summary>
+		[DataMember(Order = <#= property.Order #>)] 
+        public <#= property.Type #> <#= property.Name #> { get; set; }
+
+<#    
+}
+#>
+		public <#= element.Name #>() 
+        {
+            
+        }
+
+        public <#= element.Name #>(<#BuildProperties(element.Properties);#>)
+        {
+            <#BuildConstructorProperties(element.Properties);#>
+        }
+        
+    }//end <#= element.Name #> class
+
+
+<#    
+	} 
+#>
+}//end namespace

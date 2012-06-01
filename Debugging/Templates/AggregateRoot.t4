@@ -1,0 +1,34 @@
+﻿namespace <#= this.BoundedContext.ModelNamespace #>.Model
+{
+	/// <summary>
+	/// <#=GetAggregateRootDescription(this.BoundedContext)#>
+	/// </summary> 
+	public partial class <#= this.BoundedContext.Element.Name #> : IAggregate<<#=GetAggregateStateIdType(this.BoundedContext)#>>, I<#= this.BoundedContext.Element.Name #>
+	{
+		readonly <#=GetAggregateStateName(this.BoundedContext)#> _state;
+        readonly Action<IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>>> _observer;
+        private readonly MyMessageContext _context;
+		readonly Repository _repository;
+
+		public <#=GetAggregateRootName(this.BoundedContext)#>(<#=GetAggregateStateName(this.BoundedContext)#> state, Action<IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>>> observer,Repository repository, MyMessageContext context)
+        {
+            _state = state;
+            _observer = observer;
+			_context = context;
+			_repository = repository;
+        }
+
+		public void Execute(ICommand<<#=GetAggregateStateIdType(this.BoundedContext)#>> c)
+        {
+            ThrowOnInvalidStateTransition(c);
+
+            RedirectToWhen.InvokeCommand(this, c);
+        }
+
+        void Apply(IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>> e)
+        {
+            _state.Apply(e);
+            _observer(e);
+        }
+
+	}//end aggregateroot

@@ -1,0 +1,15 @@
+﻿[$RootKey$\Generators] 
+[$RootKey$\Generators\{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}] 
+[$RootKey$\Generators\{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}\DizzleFileCodeGenerator]
+ @="Custom tool that generates C# files for domain model aggregates described in .4dizzle files" 
+ "CLSID"="{6CEB1406-CB25-445d-BD4B-6D52C72B3EB4}" 
+ "GeneratesDesignTimeSource"=dword:00000001 
+ [$RootKey$\CLSID] 
+ [$RootKey$\CLSID\{6CEB1406-CB25-445d-BD4B-6D52C72B3EB4}] 
+ @=" Custom tool that generates C# files for domain model aggregates described in .4dizzle files " 
+ "Class"=" FourDeep.Dizzle.CodeGenerator" 
+ "InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL" 
+ "ThreadingModel"="Both" 
+ "CodeBase"="$PackageFolder$\FourDeep.Dizzle.DslPackage.dll" 
+ [$RootKey$\Generators\{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}\.4dizzle] 
+ @=" DizzleFileCodeGenerator "

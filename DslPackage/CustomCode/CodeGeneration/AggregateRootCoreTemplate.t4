@@ -40,32 +40,22 @@ namespace <#= this.BoundedContext.ModelNamespace #>.Model
 	/// <summary>
 	/// <#=GetAggregateRootDescription(this.BoundedContext)#>
 	/// </summary> 
-	public partial class <#= this.BoundedContext.Element.Name #> : IAggregate<<#=GetAggregateStateIdType(this.BoundedContext)#>>, I<#= this.BoundedContext.Element.Name #>
+	public partial class <#= this.BoundedContext.Element.Name #> //: IAggregate<<#=GetAggregateStateIdType(this.BoundedContext)#>>, I<#= this.BoundedContext.Element.Name #>
 	{
 		readonly <#=GetAggregateStateName(this.BoundedContext)#> _state;
-        readonly Action<IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>>> _observer;
-        private readonly MyMessageContext _context;
-		readonly Repository _repository;
+		public IList<IEvent<IIdentity>> Changes = new List<IEvent<IIdentity>>();
+        private readonly MessageContext _context;
 
-		public <#=GetAggregateRootName(this.BoundedContext)#>(<#=GetAggregateStateName(this.BoundedContext)#> state, Action<IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>>> observer,Repository repository, MyMessageContext context)
+		public <#=GetAggregateRootName(this.BoundedContext)#>(<#=GetAggregateStateName(this.BoundedContext)#> state, MessageContext context)
         {
             _state = state;
-            _observer = observer;
 			_context = context;
-			_repository = repository;
-        }
-
-		public void Execute(ICommand<<#=GetAggregateStateIdType(this.BoundedContext)#>> c)
-        {
-            ThrowOnInvalidStateTransition(c);
-
-            RedirectToWhen.InvokeCommand(this, c);
         }
 
         void Apply(IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>> e)
         {
-            _state.Apply(e);
-            _observer(e);
+			_state.Mutate(e);
+            Changes.Add(e);
         }
 
 	}//end aggregateroot
@@ -75,7 +65,7 @@ namespace <#= this.BoundedContext.ModelNamespace #>.Model
 	/// </summary> 
 
 	[DataContract]
-    public partial class <#= this.BoundedContext.Element.AggregateState.Name #> : IAggregateState, I<#= this.BoundedContext.Element.AggregateState.Name #>
+    public partial class <#= this.BoundedContext.Element.AggregateState.Name #> : I<#= this.BoundedContext.Element.AggregateState.Name #>
     {
 
 <#
@@ -96,13 +86,13 @@ foreach (Property property in this.BoundedContext.Element.AggregateState.Propert
         {
             foreach (var e in events)
             {
-                Apply(e);
+                Mutate(e);
             }
         }
 
 		public int Version { get; private set; }
 
-		public void Apply(IEvent<IIdentity> e)
+		public void Mutate(IEvent<IIdentity> e)
         {
             Version += 1;
             RedirectToWhen.InvokeEventOptional(this, e);
@@ -110,7 +100,7 @@ foreach (Property property in this.BoundedContext.Element.AggregateState.Propert
 
     }//end aggregate state
 
-	#region Aggregate and AggregateState interfaces
+	#region Aggregate and AggregateState  and application service interfaces
 
 	/// <summary> 
 	/// <#= this.BoundedContext.Element.Name #> command interface
@@ -120,6 +110,13 @@ foreach (Property property in this.BoundedContext.Element.AggregateState.Propert
 		<#BuildCommandInterfaceMethods(this.BoundedContext);#>
     }
     
+	/// <summary> 
+	/// <#= this.BoundedContext.Element.Name #> application service command interface
+	/// </summary> 
+	public interface I<#= this.BoundedContext.Element.Name #>ApplicationService
+    {
+		<#BuildCommandInterfaceMethods(this.BoundedContext);#>
+    }
 
 	/// <summary>
 	/// <#= this.BoundedContext.Element.AggregateState.Name #> event interface

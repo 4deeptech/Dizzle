@@ -63,6 +63,17 @@ namespace Debugging
             this.PopIndent();
         }
 
+        public void BuildCommandInterfaceMethodsWithContext(BoundedContext context)
+        {
+            //void When(CreateUser c);
+            this.PushIndent("\t\t");
+            foreach (DomainCommand command in context.Element.DomainCommands)
+            {
+                this.WriteLine("void When(" + command.Name + " c, MessageContext context);");
+            }
+            this.PopIndent();
+        }
+
         public void BuildEventInterfaceMethods(BoundedContext context)
         {
             //void When(UserCreated c);

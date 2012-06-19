@@ -115,7 +115,7 @@ foreach (Property property in this.BoundedContext.Element.AggregateState.Propert
 	/// </summary> 
 	public interface I<#= this.BoundedContext.Element.Name #>ApplicationService
     {
-		<#BuildCommandInterfaceMethods(this.BoundedContext);#>
+		<#BuildCommandInterfaceMethodsWithContext(this.BoundedContext);#>
     }
 
 	/// <summary>

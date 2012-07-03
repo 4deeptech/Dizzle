@@ -54,7 +54,7 @@ namespace <#= this.BoundedContext.ModelNamespace #>.Model
 
         void Apply(IEvent<<#=GetAggregateStateIdType(this.BoundedContext)#>> e)
         {
-			_state.Mutate(e);
+			_state.Mutate(e,_context);
             Changes.Add(e);
         }
 
@@ -82,20 +82,20 @@ foreach (Property property in this.BoundedContext.Element.AggregateState.Propert
 }
 #>
         
-		public <#= this.BoundedContext.Element.AggregateState.Name #>(IEnumerable<IEvent<IIdentity>> events)
+		public <#= this.BoundedContext.Element.AggregateState.Name #>(IEnumerable<IEvent<IIdentity>> events, MessageContext context)
         {
             foreach (var e in events)
             {
-                Mutate(e);
+                Mutate(e,context);
             }
         }
 
 		public int Version { get; private set; }
 
-		public void Mutate(IEvent<IIdentity> e)
+		public void Mutate(IEvent<IIdentity> e, MessageContext context)
         {
             Version += 1;
-            RedirectToWhen.InvokeEventOptional(this, e);
+            RedirectToWhen.InvokeEventOptional(this, e, context);
         }
 
     }//end aggregate state
@@ -124,7 +124,7 @@ foreach (Property property in this.BoundedContext.Element.AggregateState.Propert
 
     public interface I<#= this.BoundedContext.Element.AggregateState.Name #>
     {
-		<#BuildEventInterfaceMethods(this.BoundedContext);#>
+		<#BuildEventInterfaceMethodsWithContext(this.BoundedContext);#>
     }
 
 	#endregion	 

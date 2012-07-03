@@ -85,6 +85,17 @@ namespace Debugging
             this.PopIndent();
         }
 
+        public void BuildEventInterfaceMethodsWithContext(BoundedContext context)
+        {
+            //void When(UserCreated c);
+            this.PushIndent("\t\t");
+            foreach (DomainEvent evt in context.Element.AggregateState.DomainEvents)
+            {
+                this.WriteLine("void When(" + evt.Name + " e, MessageContext context);");
+            }
+            this.PopIndent();
+        }
+
         public void BuildAggregateRoot(BoundedContext context)
         {
             this.WriteLine("public partial class "+context.Element.Name +" : IAggregateRoot,");

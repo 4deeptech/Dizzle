@@ -121,6 +121,12 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="ec483037-39ed-4dfc-ab1f-015653f92072" Description="Description for FourDeep.Dizzle.DomainCommand.Required Privilege" Name="RequiredPrivilege" DisplayName="Required Privilege">
+          <Notes>When set, add a RequiresPrivilegeAttribute</Notes>
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -828,6 +834,9 @@
           </XmlRelationshipData>
           <XmlPropertyData XmlName="description">
             <DomainPropertyMoniker Name="DomainCommand/Description" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="requiredPrivilege">
+            <DomainPropertyMoniker Name="DomainCommand/RequiredPrivilege" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>

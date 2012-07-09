@@ -69,6 +69,10 @@ namespace Debugging
             this.PushIndent("\t\t");
             foreach (DomainCommand command in context.Element.DomainCommands)
             {
+                if(!string.IsNullOrEmpty(command.RequiredPrivilege))
+                {
+                    this.WriteLine("[RequiresPrivilege(\"" + command.RequiredPrivilege + "\")]");
+                }
                 this.WriteLine("void When(" + command.Name + " c, MessageContext context);");
             }
             this.PopIndent();

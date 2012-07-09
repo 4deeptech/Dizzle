@@ -3258,6 +3258,23 @@ namespace FourDeep.Dizzle
 					}
 				}
 			}
+			// RequiredPrivilege
+			if (!serializationContext.Result.Failed)
+			{
+				string attribRequiredPrivilege = DizzleSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "requiredPrivilege");
+				if (attribRequiredPrivilege != null)
+				{
+					global::System.String valueOfRequiredPrivilege;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribRequiredPrivilege, out valueOfRequiredPrivilege))
+					{
+						instanceOfDomainCommand.RequiredPrivilege = valueOfRequiredPrivilege;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DizzleSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "requiredPrivilege", typeof(global::System.String), attribRequiredPrivilege);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -3774,6 +3791,17 @@ namespace FourDeep.Dizzle
 				{
 					if (!string.IsNullOrEmpty(propValue))
 						DizzleSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "description", propValue);
+	
+				}
+			}
+			// RequiredPrivilege
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfDomainCommand.RequiredPrivilege;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						DizzleSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "requiredPrivilege", propValue);
 	
 				}
 			}

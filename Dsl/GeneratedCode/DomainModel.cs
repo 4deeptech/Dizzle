@@ -129,6 +129,7 @@ namespace FourDeep.Dizzle
 				new DomainMemberInfo(typeof(AggregateState), "Description", AggregateState.DescriptionDomainPropertyId, typeof(AggregateState.DescriptionPropertyHandler)),
 				new DomainMemberInfo(typeof(DomainCommand), "Name", DomainCommand.NameDomainPropertyId, typeof(DomainCommand.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(DomainCommand), "Description", DomainCommand.DescriptionDomainPropertyId, typeof(DomainCommand.DescriptionPropertyHandler)),
+				new DomainMemberInfo(typeof(DomainCommand), "RequiredPrivilege", DomainCommand.RequiredPrivilegeDomainPropertyId, typeof(DomainCommand.RequiredPrivilegePropertyHandler)),
 				new DomainMemberInfo(typeof(Property), "Order", Property.OrderDomainPropertyId, typeof(Property.OrderPropertyHandler)),
 				new DomainMemberInfo(typeof(Property), "Name", Property.NameDomainPropertyId, typeof(Property.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(Property), "Type", Property.TypeDomainPropertyId, typeof(Property.TypePropertyHandler)),

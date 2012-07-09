@@ -1463,6 +1463,93 @@ namespace FourDeep.Dizzle
 		}
 		
 		#endregion
+		#region RequiredPrivilege domain property code
+		
+		/// <summary>
+		/// RequiredPrivilege domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid RequiredPrivilegeDomainPropertyId = new global::System.Guid(0xec483037, 0x39ed, 0x4dfc, 0xab, 0x1f, 0x01, 0x56, 0x53, 0xf9, 0x20, 0x72);
+		
+		/// <summary>
+		/// Storage for RequiredPrivilege
+		/// </summary>
+		private global::System.String requiredPrivilegePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of RequiredPrivilege domain property.
+		/// Description for FourDeep.Dizzle.DomainCommand.Required Privilege
+		/// </summary>
+		[DslDesign::DisplayNameResource("FourDeep.Dizzle.DomainCommand/RequiredPrivilege.DisplayName", typeof(global::FourDeep.Dizzle.DizzleDomainModel), "FourDeep.Dizzle.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("FourDeep.Dizzle.DomainCommand/RequiredPrivilege.Description", typeof(global::FourDeep.Dizzle.DizzleDomainModel), "FourDeep.Dizzle.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ec483037-39ed-4dfc-ab1f-015653f92072")]
+		public global::System.String RequiredPrivilege
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return requiredPrivilegePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				RequiredPrivilegePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the DomainCommand.RequiredPrivilege domain property.
+		/// </summary>
+		internal sealed partial class RequiredPrivilegePropertyHandler : DslModeling::DomainPropertyValueHandler<DomainCommand, global::System.String>
+		{
+			private RequiredPrivilegePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the DomainCommand.RequiredPrivilege domain property value handler.
+			/// </summary>
+			public static readonly RequiredPrivilegePropertyHandler Instance = new RequiredPrivilegePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the DomainCommand.RequiredPrivilege domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return RequiredPrivilegeDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(DomainCommand element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.requiredPrivilegePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(DomainCommand element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.requiredPrivilegePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region AggregateRoot opposite domain role accessor
 		/// <summary>
 		/// Gets or sets AggregateRoot.

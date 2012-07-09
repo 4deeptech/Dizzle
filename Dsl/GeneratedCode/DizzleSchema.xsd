@@ -333,6 +333,8 @@
         <xsd:attribute name="name" type="xsd:string" use="required" />
         <!-- Property: Description -->
         <xsd:attribute name="description" type="xsd:string" />
+        <!-- Property: RequiredPrivilege -->
+        <xsd:attribute name="requiredPrivilege" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

@@ -213,6 +213,14 @@
     <value>Description</value>
     <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;DomainCommand&apos;</comment>
   </data>
+  <data name="FourDeep.Dizzle.DomainCommand/RequiredPrivilege.Description" xml:space="preserve">
+    <value>Description for FourDeep.Dizzle.DomainCommand.Required Privilege</value>
+    <comment>Description for DomainProperty &apos;RequiredPrivilege&apos; on DomainClass &apos;DomainCommand&apos;</comment>
+  </data>
+  <data name="FourDeep.Dizzle.DomainCommand/RequiredPrivilege.DisplayName" xml:space="preserve">
+    <value>Required Privilege</value>
+    <comment>DisplayName for DomainProperty &apos;RequiredPrivilege&apos; on DomainClass &apos;DomainCommand&apos;</comment>
+  </data>
   <data name="FourDeep.Dizzle.Property.Description" xml:space="preserve">
     <value>Description for FourDeep.Dizzle.Property</value>
     <comment>Description for DomainClass &apos;Property&apos;</comment>

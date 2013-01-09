@@ -43,7 +43,7 @@ namespace <#= this.BoundedContext.ModelNamespace #>.Model
 	public partial class <#= this.BoundedContext.Element.Name #> //: IAggregate<<#=GetAggregateStateIdType(this.BoundedContext)#>>, I<#= this.BoundedContext.Element.Name #>
 	{
 		readonly <#=GetAggregateStateName(this.BoundedContext)#> _state;
-		public IList<IEvent<IIdentity>> Changes = new List<IEvent<IIdentity>>();
+		public IList<IEvent> Changes = new List<IEvent>();
         private readonly MessageContext _context;
 
 		public <#=GetAggregateRootName(this.BoundedContext)#>(<#=GetAggregateStateName(this.BoundedContext)#> state, MessageContext context)
@@ -82,7 +82,7 @@ foreach (Property property in this.BoundedContext.Element.AggregateState.Propert
 }
 #>
         
-		public <#= this.BoundedContext.Element.AggregateState.Name #>(IEnumerable<IEvent<IIdentity>> events, MessageContext context)
+		public <#= this.BoundedContext.Element.AggregateState.Name #>(IEnumerable<IEvent> events, MessageContext context)
         {
             foreach (var e in events)
             {
@@ -92,7 +92,7 @@ foreach (Property property in this.BoundedContext.Element.AggregateState.Propert
 
 		public int Version { get; private set; }
 
-		public void Mutate(IEvent<IIdentity> e, MessageContext context)
+		public void Mutate(IEvent e, MessageContext context)
         {
             Version += 1;
             RedirectToWhen.InvokeEventOptional(this, e, context);
@@ -176,6 +176,14 @@ foreach (DomainCommand element in this.BoundedContext.Element.DomainCommands)
 	/// <#= element.Description #>
 	/// </summary>
 	[DataContract(Namespace = "<#= this.BoundedContext.ModelNamespace #>")]
+<#
+if(!string.IsNullOrEmpty(element.RequiredPrivilege))
+{
+#>
+	[RequiresPrivilege("<#= element.RequiredPrivilege #>")]
+<#
+}
+#>
     public partial class <#= element.Name #> : ICommand<<#=GetAggregateStateIdType(this.BoundedContext)#>>
     {
 

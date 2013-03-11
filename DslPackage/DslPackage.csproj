@@ -100,20 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CommandSet.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomCode\CodeGeneration\AggregateInterfaces.t4" />
-    <EmbeddedResource Include="CustomCode\CodeGeneration\AggregateRoot.t4" />
     <EmbeddedResource Include="CustomCode\CodeGeneration\AggregateRootCoreTemplate.t4" />
-    <EmbeddedResource Include="CustomCode\CodeGeneration\AggregateState.t4" />
     <EmbeddedResource Include="CustomCode\CodeGeneration\CodeGenerationResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CodeGenerationResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomCode\CodeGeneration\Commands.t4" />
-    <EmbeddedResource Include="CustomCode\CodeGeneration\CopyrightHeader.t4" />
-    <EmbeddedResource Include="CustomCode\CodeGeneration\DomainNamespaces.t4" />
-    <EmbeddedResource Include="CustomCode\CodeGeneration\Entities.t4" />
-    <EmbeddedResource Include="CustomCode\CodeGeneration\Events.t4" />
-    <EmbeddedResource Include="CustomCode\CodeGeneration\Views.t4" />
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>

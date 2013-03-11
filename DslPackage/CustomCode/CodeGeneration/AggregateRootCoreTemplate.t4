@@ -33,7 +33,7 @@ using <#= this.BoundedContext.ModelNamespace #>.Contracts;
 using <#= this.BoundedContext.ModelNamespace #>.Events;
 using <#= this.BoundedContext.ModelNamespace #>.Commands;
 using <#= this.BoundedContext.ModelNamespace #>.Model; 
-using Ranken.Domain;
+using <#= this.BoundedContext.ModelNamespace #>.Domain;
 
 namespace <#= this.BoundedContext.ModelNamespace #>.Model
 {

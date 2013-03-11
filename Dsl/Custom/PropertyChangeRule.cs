@@ -90,16 +90,6 @@ namespace FourDeep.Dizzle
 
         #endregion
 
-        //#region static DomainPath traversal methods to get the list of compartments to update
-        //internal static global::System.Collections.ICollection GetAggregateStateForAggregateStateShapePropertiesFromLastLink(global::FourDeep.Dizzle.AggregateStateHasProperties root)
-        //{
-        //    // Segment 0
-        //    global::FourDeep.Dizzle.AggregateState result = root.AggregateState;
-        //    if (result == null) return new DslModeling::ModelElement[0];
-        //    return new DslModeling::ModelElement[] { result };
-        //}
-        //#endregion
-
         #region helper method to update compartments
         /// <summary>
         /// Updates the compartments for the shapes associated to the given list of model elements

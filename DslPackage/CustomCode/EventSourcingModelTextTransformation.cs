@@ -28,7 +28,6 @@ namespace Debugging
             if (context != null && context.Element != null)
                 return context.Element.Description;
             else return "Aggregate Root description cannot be obtained. Make sure your model contains an aggregate root with a description";
-
         }
 
         public string GetAggregateStateName(BoundedContext context)
@@ -54,7 +53,6 @@ namespace Debugging
 
         public void BuildCommandInterfaceMethods(BoundedContext context)
         {
-            //void When(CreateUser c);
             this.PushIndent("\t\t");
             foreach(DomainCommand command in context.Element.DomainCommands)
             {
@@ -65,7 +63,6 @@ namespace Debugging
 
         public void BuildCommandInterfaceMethodsWithContext(BoundedContext context)
         {
-            //void When(CreateUser c);
             this.PushIndent("\t\t");
             foreach (DomainCommand command in context.Element.DomainCommands)
             {
@@ -80,7 +77,6 @@ namespace Debugging
 
         public void BuildEventInterfaceMethods(BoundedContext context)
         {
-            //void When(UserCreated c);
             this.PushIndent("\t\t");
             foreach (DomainEvent evt in context.Element.AggregateState.DomainEvents)
             {
@@ -91,69 +87,12 @@ namespace Debugging
 
         public void BuildEventInterfaceMethodsWithContext(BoundedContext context)
         {
-            //void When(UserCreated c);
             this.PushIndent("\t\t");
             foreach (DomainEvent evt in context.Element.AggregateState.DomainEvents)
             {
                 this.WriteLine("void When(" + evt.Name + " e, MessageContext context);");
             }
             this.PopIndent();
-        }
-
-        public void BuildAggregateRoot(BoundedContext context)
-        {
-            this.WriteLine("public partial class "+context.Element.Name +" : IAggregateRoot,");
-            this.PushIndent("\t");
-		    this.WriteLine("IMemento<IAggregateState>,");
-		    BuildCommandHandlerInterfaces(context);
-            this.WriteLine("{");
-            this.PushIndent("\t");
-            this.WriteLine("internal AccountState _state = null;");
-            this.WriteLine("internal IRepository _repository = null;");
-            this.WriteLine("private readonly Func<MyMessageContext> _contextFactory;");
-            //public Account()
-            //{
-            //    _state = new AccountState();
-            //}
-
-            //public Account(IRepository repository, Func<MyMessageContext> contextFactory)
-            //{
-            //    _state = new AccountState();
-            //    _repository = repository;
-            //    _contextFactory = contextFactory;
-            //}
-
-            //public Account(IRepository repository, AccountState state)
-            //{
-            //    _state = state;
-            //    _repository = repository;
-            //}
-
-            //public Account(IRepository repository, Guid accountNumber)
-            //{
-            //    _repository = repository;
-            //    _state = _repository.GetStateById<AccountState>(accountNumber);
-            //}
-        }
-
-        public void BuildAggregateRootState()
-        {
-        }
-
-        public void BuildEvents()
-        {
-        }
-
-        public void BuildCommands()
-        {
-        }
-
-        public void BuildViewProjections()
-        {
-        }
-
-        public void BuildEventSpecifications()
-        {
         }
 
         public void BuildProperties(LinkedElementCollection<Property> properties)
@@ -198,49 +137,5 @@ namespace Debugging
             sb.Append(")");
             return sb.ToString();
         }
-
-        public string BuildPropertyEqualitiesToString(LinkedElementCollection<Property> properties,List<string> ignorePropertyNames)
-        {
-            //(AccountNumber == p.AccountNumber) && (AccountName == p.AccountName)
-            StringBuilder sb = new StringBuilder();
-            int count = 0;
-            foreach (Property prop in properties)
-            {
-                if (!ignorePropertyNames.Contains(prop.Name))
-                {
-                    if (count == 0)
-                    {
-                        sb.Append("(" + prop.Name + " == p." + prop.Name + ")");
-                    }
-                    else
-                    {
-                        sb.Append(" && (" + prop.Name + " == p." + prop.Name + ")");
-                    }
-                    count++;
-                }
-            }
-            return sb.ToString();
-        }
-
-        public void BuildCommandHandlerInterfaces(BoundedContext context)
-        {
-            int count = 0;
-            foreach (DomainCommand cmd in context.DomainCommands)
-            {
-                if (count == 0)
-                {
-                    this.WriteLine("Define.Handle<" + cmd.Name + ">");
-                    this.PushIndent("\t");
-                }
-                else
-                {
-                    this.WriteLine(this.CurrentIndent + ", Define.Handle<" + cmd.Name + ">");
-                }
-                count++;
-            }
-            this.PopIndent();
-        }
     }
-
-    
-}
+ }

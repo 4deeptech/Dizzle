@@ -1,9 +1,0 @@
-﻿#region (c) 2012 4Deep Technologies LLC
-
-// Copyright (c) 4Deep Technologies LLC 2012 (http://www.4deeptech.com)
-// Created by Darren Ford
-// Based on code by Rinat Abdullin of Lokad (http://www.lokad.com)
-
-//Generated using 4Dizzle DSL Model and Code Generator
-//see http://www.4deeptech.com/blog/post/2012/02/16/Creating-a-DSL-for-DDD-and-Event-Sourcing-Code-Generation.aspx
-#endregion

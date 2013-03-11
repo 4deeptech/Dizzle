@@ -118,34 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="AggregateInterfaces" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>aggregateinterfaces.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AggregateRoot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>aggregateroot.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="AggregateRootCoreTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>aggregaterootcoretemplate.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AggregateState" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>aggregatestate.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Commands" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>commands.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CopyrightHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>copyrightheader.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DomainNamespaces" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>domainnamespaces.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Entities" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>entities.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Events" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>events.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Views" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>views.t4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

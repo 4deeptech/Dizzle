@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using FourDeep.Dizzle.CustomCode.CodeGeneration;
 using Debugging;
+using System.Windows.Forms;
 
 namespace FourDeep.Dizzle
 {
@@ -15,11 +16,21 @@ namespace FourDeep.Dizzle
         protected override byte[] GenerateCode(string inputFileName, string inputFileContent) 
         {
             // Replace the supplied file contents with the template we want to run 
-            inputFileContent = ASCIIEncoding.UTF8.GetString(CodeGenerationResource.AggregateRootCoreTemplate); 
+            FileInfo nfo = new FileInfo(inputFileName);
+            DirectoryInfo dnfo = nfo.Directory;
+            string coreTemplate = Path.Combine(dnfo.FullName, "AggregateRootCoreTemplate.t4");
+            if (File.Exists(coreTemplate))
+            {
+                inputFileContent = File.ReadAllText(coreTemplate, ASCIIEncoding.UTF8);
+            }
+            else
+            {
+                inputFileContent = ASCIIEncoding.UTF8.GetString(CodeGenerationResource.AggregateRootCoreTemplate);
+            }
+            
             // Substitute the name of the current model file into the template. 
             FileInfo fi = new FileInfo(inputFileName);
             inputFileContent = inputFileContent.Replace("MyAggregateName.4dizzle", fi.Name); 
-            //inputFileContent = inputFileContent.Replace("namespace ShapesTest", "namespace " + FileNamespace); 
             // Now just delegate the rest of the work to the base class 
             byte[] data; 
             data = base.GenerateCode(inputFileName, inputFileContent); 

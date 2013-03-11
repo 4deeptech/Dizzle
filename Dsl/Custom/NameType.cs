@@ -48,19 +48,6 @@ namespace FourDeep.Dizzle
         } 
     }
 
-    //public class NameTypeEditor : System.Drawing.Design.UITypeEditor
-    //{
-    //    public NameTypeEditor(Type t)
-    //        : base(t)
-    //    {
-    //    }
-
-    //    public override object EditValue(System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value)
-    //    {
-    //        return base.EditValue(context, provider, value);
-    //    }
-    //}
-
     public class PropertyTypeNameEditor : System.Drawing.Design.UITypeEditor
     {
         private IWindowsFormsEditorService _wfes;
@@ -110,24 +97,9 @@ namespace FourDeep.Dizzle
             listBox.Items.Add("Object");
             listBox.Items.Add("TimeSpan");
 
-            
-
             ElementPropertyDescriptor desc = context.PropertyDescriptor as ElementPropertyDescriptor;
             Property currentElement = desc.ModelElement as Property;
             BoundedContext currentModel = currentElement.BoundedContext;
-            //IList elements = currentModel.;
-            //allows fo stuffing in custom types
-            //foreach (ExampleElement element in elements)
-            //{
-            //    listBox.Items.Add(element.Name);
-            //}
-
-            //var q = from t in Assembly.GetAssembly(typeof(string)).GetTypes() where t.IsClass && t.Namespace == "System" select t.Name;
-            //foreach (string typeName in q)
-            //{
-            //    listBox.Items.Add(typeName);
-            //}
-
 
             listBox.SelectedItem = value;
 

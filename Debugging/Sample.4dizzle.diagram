@@ -2,7 +2,7 @@
 <dizzleDiagram dslVersion="1.0.0.0" Id="09fb1e13-e116-4ee7-b2e2-be505b6d0d29" absoluteBounds="0, 0, 12.625, 8.5" name="Sample">
   <boundedContextMoniker Id="d8762f4d-ca74-4008-8558-5eab6b544b97" />
   <nestedChildShapes>
-    <aggregateRootShape Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" absoluteBounds="1.25, 0.75, 2, 0.625" fillColor="BurlyWood" textColor="Black" fillGradientMode="Horizontal">
+    <aggregateRootShape Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" absoluteBounds="1.375, 0.75, 2, 0.625" fillColor="BurlyWood" textColor="Black" fillGradientMode="Horizontal">
       <aggregateRootMoniker name="/d8762f4d-ca74-4008-8558-5eab6b544b97/PersonAggregate" />
     </aggregateRootShape>
     <aggregateStateShape Id="252b444a-a61d-4ba3-985b-23562061cbe8" absoluteBounds="5.375, 0.75, 2.25, 1.8208968098958334" fillColor="DarkGreen" textColor="White" fillGradientMode="Horizontal">
@@ -11,7 +11,7 @@
         <elementListCompartment Id="a2d697da-852b-448e-b39b-3baaa5e3f762" absoluteBounds="5.3900000000000006, 1.26, 2.2199999999999998, 1.2108968098958333" name="Properties" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </aggregateStateShape>
-    <aggregateStateConnector Id="2327640b-025a-4190-892e-040dc1bfe9bf" edgePoints="[(3.25 : 1.0625); (5.375 : 1.0625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <aggregateStateConnector Id="2327640b-025a-4190-892e-040dc1bfe9bf" edgePoints="[(3.375 : 1.0625); (5.375 : 1.0625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <aggregateRootHasAggregateStateMoniker Id="6cd0c405-ebbf-48d8-b542-d57b0f9d70f0" />
       <nodes>
         <aggregateRootShapeMoniker Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" />
@@ -24,7 +24,7 @@
         <elementListCompartment Id="142476a9-a8a9-4142-aaad-d3ddfd620d78" absoluteBounds="0.51500000000000012, 2.385, 1.8450000000000002, 1.0185953776041665" name="Properties" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </domainCommandShape>
-    <commandConnector Id="16bb1716-f0d8-4a62-bd3a-d437862b96d7" edgePoints="[(1.625 : 1.375); (1.625 : 1.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <commandConnector Id="16bb1716-f0d8-4a62-bd3a-d437862b96d7" edgePoints="[(1.875 : 1.375); (1.875 : 1.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <aggregateRootHandlesDomainCommandsMoniker Id="b647c50f-2ffd-4788-9ce2-77675551344a" />
       <nodes>
         <aggregateRootShapeMoniker Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" />
@@ -56,7 +56,7 @@
         <elementListCompartment Id="7ccd071d-850f-4665-827f-6ea0cc1d9bd2" absoluteBounds="2.5149999999999997, 4.385, 1.7200000000000002, 1.2108968098958333" name="Properties" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </domainEventShape>
-    <commandConnector Id="5c05dc60-cf58-4d3d-a30f-f1bfe2861605" edgePoints="[(1.25 : 1.10795454545455); (0.26 : 1.10795454545455); (0.26 : 4.45532490664308); (0.5 : 4.45532490664308)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <commandConnector Id="5c05dc60-cf58-4d3d-a30f-f1bfe2861605" edgePoints="[(2.656252 : 1.375); (2.656252 : 1.8125); (2.4375 : 1.8125); (2.4375 : 4.49699625651042); (2.375 : 4.49699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <aggregateRootHandlesDomainCommandsMoniker Id="790ef0aa-0811-4507-bae1-1364acbda21a" />
       <nodes>
         <aggregateRootShapeMoniker Id="3fdce34c-f67c-41e2-b3c7-1287d2ac11a3" />

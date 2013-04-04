@@ -23,39 +23,29 @@ using Awesome.Domain.Contracts;
 using Awesome.Domain.Events;
 using Awesome.Domain.Commands;
 using Awesome.Domain.Model; 
-using Ranken.Domain;
+using Awesome.Domain.Domain;
 
 namespace Awesome.Domain.Model
 {
 	/// <summary>
 	/// My sample person aggregate
 	/// </summary> 
-	public partial class PersonAggregate : IAggregate<Guid>, IPersonAggregate
+	public partial class PersonAggregate //: IAggregate<Guid>, IPersonAggregate
 	{
 		readonly PersonAggregateState _state;
-        readonly Action<IEvent<Guid>> _observer;
-        private readonly MyMessageContext _context;
-		readonly Repository _repository;
+		public IList<IEvent> Changes = new List<IEvent>();
+        private readonly MessageContext _context;
 
-		public PersonAggregate(PersonAggregateState state, Action<IEvent<Guid>> observer,Repository repository, MyMessageContext context)
+		public PersonAggregate(PersonAggregateState state, MessageContext context)
         {
             _state = state;
-            _observer = observer;
 			_context = context;
-			_repository = repository;
-        }
-
-		public void Execute(ICommand<Guid> c)
-        {
-            ThrowOnInvalidStateTransition(c);
-
-            RedirectToWhen.InvokeCommand(this, c);
         }
 
         void Apply(IEvent<Guid> e)
         {
-            _state.Apply(e);
-            _observer(e);
+			_state.Mutate(e,_context);
+            Changes.Add(e);
         }
 
 	}//end aggregateroot
@@ -65,7 +55,7 @@ namespace Awesome.Domain.Model
 	/// </summary> 
 
 	[DataContract]
-    public partial class PersonAggregateState : IAggregateState, IPersonAggregateState
+    public partial class PersonAggregateState : IPersonAggregateState
     {
 
 		/// <summary>
@@ -99,25 +89,25 @@ namespace Awesome.Domain.Model
         public List<BonusReward> Bonuses { get; internal set; }
 
         
-		public PersonAggregateState(IEnumerable<IEvent<IIdentity>> events)
+		public PersonAggregateState(IEnumerable<IEvent> events, MessageContext context)
         {
             foreach (var e in events)
             {
-                Apply(e);
+                Mutate(e,context);
             }
         }
 
 		public int Version { get; private set; }
 
-		public void Apply(IEvent<IIdentity> e)
+		public void Mutate(IEvent e, MessageContext context)
         {
             Version += 1;
-            RedirectToWhen.InvokeEventOptional(this, e);
+            RedirectToWhen.InvokeEventOptional(this, e, context);
         }
 
     }//end aggregate state
 
-	#region Aggregate and AggregateState interfaces
+	#region Aggregate and AggregateState  and application service interfaces
 
 	/// <summary> 
 	/// PersonAggregate command interface
@@ -128,6 +118,14 @@ namespace Awesome.Domain.Model
 		void When(RewardPerson c);
     }
     
+	/// <summary> 
+	/// PersonAggregate application service command interface
+	/// </summary> 
+	public interface IPersonAggregateApplicationService
+    {
+		void When(CreatePerson c, MessageContext context);
+		void When(RewardPerson c, MessageContext context);
+    }
 
 	/// <summary>
 	/// PersonAggregateState event interface
@@ -135,8 +133,8 @@ namespace Awesome.Domain.Model
 
     public interface IPersonAggregateState
     {
-		void When(PersonCreated e);
-		void When(PersonRewarded e);
+		void When(PersonCreated e, MessageContext context);
+		void When(PersonRewarded e, MessageContext context);
     }
 
 	#endregion	 

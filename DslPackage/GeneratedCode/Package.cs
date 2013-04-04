@@ -12,7 +12,6 @@ using VSShell = global::Microsoft.VisualStudio.Shell;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
-using VSTextTemplatingHost = global::Microsoft.VisualStudio.TextTemplating.VSHost;
 using System;
 using System.Diagnostics;
 using System.Drawing.Design;
@@ -24,7 +23,7 @@ namespace FourDeep.Dizzle
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideToolWindow(typeof(DizzleExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(DizzleExplorerToolWindow), Constants.DizzleEditorFactoryId)]
@@ -101,6 +100,7 @@ namespace FourDeep.Dizzle
 					0xff00ff)]
 	[VSShell::ProvideEditorFactory(typeof(DizzleEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(DizzleEditorFactory), "." + Constants.DesignerFileExtension, 50)]
+	[VSShell::ProvideEditorLogicalView(typeof(DizzleEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
 	[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
 		ProjectSystem = DslShell::ProvideRelatedFileAttribute.CSharpProjectGuid,
 		FileOptions = DslShell::RelatedFileType.FileName)]
@@ -111,6 +111,7 @@ namespace FourDeep.Dizzle
 	[global::System.Runtime.InteropServices.ComVisible(true)]
 	[DslShell::ProvideBindingPath]
 	[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"Dizzle", typeof(DizzleEditorFactory))]
+
 	internal abstract partial class DizzlePackageBase : DslShell::ModelingPackage
 	{
 		protected global::FourDeep.Dizzle.DizzleToolboxHelper toolboxHelper;	
@@ -198,7 +199,7 @@ namespace FourDeep.Dizzle
 	/// </summary>
 	[VSShell::ProvideMenuResource("1000.ctmenu", 1)]
 	[VSShell::ProvideToolboxItems(1)]
-	[VSTextTemplatingHost::ProvideDirectiveProcessor(typeof(global::FourDeep.Dizzle.DizzleDirectiveProcessor), global::FourDeep.Dizzle.DizzleDirectiveProcessor.DizzleDirectiveProcessorName, "A directive processor that provides access to Dizzle files")]
+	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::FourDeep.Dizzle.DizzleDirectiveProcessor), global::FourDeep.Dizzle.DizzleDirectiveProcessor.DizzleDirectiveProcessorName, "A directive processor that provides access to Dizzle files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.DizzlePackageId)]
 	internal sealed partial class DizzlePackage : DizzlePackageBase
 	{

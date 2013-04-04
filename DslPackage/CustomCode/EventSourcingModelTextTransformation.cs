@@ -9,7 +9,7 @@ using FourDeep.Dizzle;
 
 namespace Debugging
 {
-    public class EventSourcingModelTextTransformation : Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation
+    public class EventSourcingModelTextTransformation : ModelingTextTransformation
     {
         public override string TransformText()
         {
@@ -47,8 +47,17 @@ namespace Debugging
         public string GetAggregateStateIdType(BoundedContext context)
         {
             if (context != null && context.Element != null && context.Element.AggregateState != null)
-                return context.Element.AggregateState.Properties.OrderBy(prop=>prop.Order).First().Type;
-            return "object";
+            {
+                var props = context.Element.AggregateState.Properties;
+                if (props.Count() > 0)
+                    return props.OrderBy(prop => prop.Order).First().Type;
+                else
+                {
+                    return "object //You are missing the first property which should be the aggregates id";
+                }
+            }
+            else
+                return "object //You are missing the aggregate state item";
         }
 
         public void BuildCommandInterfaceMethods(BoundedContext context)

@@ -1380,7 +1380,7 @@
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
-  <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="4dizzle" Icon="C:\Users\darylmer\Documents\Visual Studio 2010\Projects\Tools\4Dizzle\Resources\File.ico" EditorGuid="0590481e-b24e-4558-a52b-29fbdc780033">
+  <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="4dizzle" Icon="C:\Users\Darren\Documents\Visual Studio 2012\Projects\Dizzle\DslPackage\Resources\File.ico" EditorGuid="0590481e-b24e-4558-a52b-29fbdc780033">
     <RootClass>
       <DomainClassMoniker Name="BoundedContext" />
     </RootClass>

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v11.0\DSLTools\Microsoft.DslTools.settings.targets" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -15,7 +14,7 @@
     <AssemblyOriginatorKeyFile>..\Key.snk</AssemblyOriginatorKeyFile>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
     <SignAssembly>true</SignAssembly>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <GacTargetOutput>false</GacTargetOutput>
     <StartupObject>
     </StartupObject>
@@ -24,7 +23,6 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -71,6 +69,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0\Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.GraphObject$(DslToolsVersionSuffix), Version=$(DslToolsAsmVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0\Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0.dll</HintPath>
     </Reference>
@@ -295,5 +294,4 @@
     <EmbeddedResource Include="Resources\ConnectorSourceSearch.cur" />
     <EmbeddedResource Include="Resources\ConnectorTargetSearch.cur" />
   </ItemGroup>
-  <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
 </Project>

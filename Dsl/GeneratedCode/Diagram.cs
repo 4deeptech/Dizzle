@@ -130,35 +130,41 @@ namespace FourDeep.Dizzle
 		/// </summary>
 		private void CompartmentItemAdded(object sender, DslModeling::ElementAddedEventArgs e)
 		{
-			CompartmentItemAddRule.ElementAdded(e, true /* repaint only */);
+			// If in Undo, Redo or Rollback the compartment item rules are not run so we must refresh the compartment list at this point if required
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemAddRule.ElementAdded(e, repaintOnly);
 		}
 		/// <summary>
 		/// Event for element deleted.
 		/// </summary>
 		private void CompartmentItemDeleted(object sender, DslModeling::ElementDeletedEventArgs e)
 		{
-			CompartmentItemDeleteRule.ElementDeleted(e, true /* repaint only */);
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemDeleteRule.ElementDeleted(e, repaintOnly);
 		}
 		/// <summary>
 		/// Event for element property changed.
 		/// </summary>
 		private void CompartmentItemPropertyChanged(object sender, DslModeling::ElementPropertyChangedEventArgs e)
 		{
-			CompartmentItemChangeRule.ElementPropertyChanged(e, true /* repaint only */);
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemChangeRule.ElementPropertyChanged(e, repaintOnly);
 		}
 		/// <summary>
 		/// Event for role-player changed.
 		/// </summary>
 		private void CompartmentItemRolePlayerChanged(object sender, DslModeling::RolePlayerChangedEventArgs e)
 		{
-			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, true /* repaint only */);
+			bool repaintOnly = !e.ElementLink.Store.InUndoRedoOrRollback;
+			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, repaintOnly);
 		}
 		/// <summary>
 		/// Event for role-player order changed.
 		/// </summary>
 		private void CompartmentItemRolePlayerOrderChanged(object sender, DslModeling::RolePlayerOrderChangedEventArgs e)
 		{
-			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, true /* repaint only */);
+			bool repaintOnly = !e.Link.Store.InUndoRedoOrRollback;
+			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, repaintOnly);
 		}
 		#endregion
 		#endregion
@@ -698,16 +704,16 @@ namespace FourDeep.Dizzle
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.View), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.Entity), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.AggregateRootHandlesDomainCommands), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.AggregateRootHasAggregateState), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.Property), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.AggregateRoot), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.Property), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.AggregateState), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.DomainEvent), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.DomainCommand), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.DomainEvent), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.Entity), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.View), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.AggregateRootHandlesDomainCommands), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.AggregateRootHasAggregateState), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::FourDeep.Dizzle.AggregateStateSubscribesToDomainEvents), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -723,33 +729,33 @@ namespace FourDeep.Dizzle
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::FourDeep.Dizzle.View)
+				if(childElement is global::FourDeep.Dizzle.AggregateRoot)
 				{
-					parentElement = GetParentForView((global::FourDeep.Dizzle.View)childElement);
-				} else
-				if(childElement is global::FourDeep.Dizzle.Entity)
-				{
-					parentElement = GetParentForEntity((global::FourDeep.Dizzle.Entity)childElement);
+					parentElement = GetParentForAggregateRoot((global::FourDeep.Dizzle.AggregateRoot)childElement);
 				} else
 				if(childElement is global::FourDeep.Dizzle.Property)
 				{
 					parentElement = GetParentForProperty((global::FourDeep.Dizzle.Property)childElement);
 				} else
-				if(childElement is global::FourDeep.Dizzle.AggregateRoot)
-				{
-					parentElement = GetParentForAggregateRoot((global::FourDeep.Dizzle.AggregateRoot)childElement);
-				} else
 				if(childElement is global::FourDeep.Dizzle.AggregateState)
 				{
 					parentElement = GetParentForAggregateState((global::FourDeep.Dizzle.AggregateState)childElement);
+				} else
+				if(childElement is global::FourDeep.Dizzle.DomainCommand)
+				{
+					parentElement = GetParentForDomainCommand((global::FourDeep.Dizzle.DomainCommand)childElement);
 				} else
 				if(childElement is global::FourDeep.Dizzle.DomainEvent)
 				{
 					parentElement = GetParentForDomainEvent((global::FourDeep.Dizzle.DomainEvent)childElement);
 				} else
-				if(childElement is global::FourDeep.Dizzle.DomainCommand)
+				if(childElement is global::FourDeep.Dizzle.Entity)
 				{
-					parentElement = GetParentForDomainCommand((global::FourDeep.Dizzle.DomainCommand)childElement);
+					parentElement = GetParentForEntity((global::FourDeep.Dizzle.Entity)childElement);
+				} else
+				if(childElement is global::FourDeep.Dizzle.View)
+				{
+					parentElement = GetParentForView((global::FourDeep.Dizzle.View)childElement);
 				} else
 				{
 					parentElement = null;

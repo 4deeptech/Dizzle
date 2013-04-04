@@ -1365,9 +1365,9 @@ namespace FourDeep.Dizzle
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromAggregateStateForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromAggregateStateForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::FourDeep.Dizzle.AggregateState root = (global::FourDeep.Dizzle.AggregateState)element;
+				global::FourDeep.Dizzle.AggregateState root = (global::FourDeep.Dizzle.AggregateState)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::FourDeep.Dizzle.Property> result = root.Properties;
 				
@@ -2130,9 +2130,9 @@ namespace FourDeep.Dizzle
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromDomainCommandForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromDomainCommandForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::FourDeep.Dizzle.DomainCommand root = (global::FourDeep.Dizzle.DomainCommand)element;
+				global::FourDeep.Dizzle.DomainCommand root = (global::FourDeep.Dizzle.DomainCommand)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::FourDeep.Dizzle.Property> result = root.Properties;
 				
@@ -2895,9 +2895,9 @@ namespace FourDeep.Dizzle
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromDomainEventForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromDomainEventForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::FourDeep.Dizzle.DomainEvent root = (global::FourDeep.Dizzle.DomainEvent)element;
+				global::FourDeep.Dizzle.DomainEvent root = (global::FourDeep.Dizzle.DomainEvent)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::FourDeep.Dizzle.Property> result = root.Properties;
 				
@@ -3661,9 +3661,9 @@ namespace FourDeep.Dizzle
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromEntityForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromEntityForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::FourDeep.Dizzle.Entity root = (global::FourDeep.Dizzle.Entity)element;
+				global::FourDeep.Dizzle.Entity root = (global::FourDeep.Dizzle.Entity)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::FourDeep.Dizzle.Property> result = root.Properties;
 				
@@ -4443,9 +4443,9 @@ namespace FourDeep.Dizzle
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromViewForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromViewForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::FourDeep.Dizzle.View root = (global::FourDeep.Dizzle.View)element;
+				global::FourDeep.Dizzle.View root = (global::FourDeep.Dizzle.View)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::FourDeep.Dizzle.Property> result = root.Properties;
 				
@@ -4457,9 +4457,9 @@ namespace FourDeep.Dizzle
 				////////
 				return FilterElementsFromViewForProperties(result);
 			}
-			internal static global::System.Collections.IList GetElementsFromViewForEvents(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromViewForEvents(DslModeling::ModelElement rootElement)
 			{
-				global::FourDeep.Dizzle.View root = (global::FourDeep.Dizzle.View)element;
+				global::FourDeep.Dizzle.View root = (global::FourDeep.Dizzle.View)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::FourDeep.Dizzle.DomainEvent> result = root.DomainEvents;
 				return result;

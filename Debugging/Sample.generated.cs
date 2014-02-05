@@ -88,6 +88,12 @@ namespace Awesome.Domain.Model
 		[DataMember(Order = 5)]
         public List<BonusReward> Bonuses { get; internal set; }
 
+		/// <summary>
+		/// The two digit code for the state
+		/// </summary>
+		[DataMember(Order = 6)]
+        public String State { get; internal set; }
+
         
 		public PersonAggregateState(IEnumerable<IEvent> events, MessageContext context)
         {
@@ -203,22 +209,29 @@ namespace Awesome.Domain.Commands
 		[DataMember(Order = 4)] 
         public float Salary { get; private set; }
 
+		/// <summary>
+		/// The two digit code for the state
+		/// </summary>
+		[DataMember(Order = 5)] 
+        public String State { get; private set; }
+
 		public CreatePerson() 
         {
             
         }
 
-        public CreatePerson(Guid id, String firstName, String lastName, float salary)
+        public CreatePerson(Guid id, String firstName, String lastName, float salary, String state)
         {
             Id = id;
 			FirstName = firstName;
 			LastName = lastName;
 			Salary = salary;
+			State = state;
         }
 
         public override string ToString()
         {
-            return string.Format("Type: {0}, Id {1}, FirstName {2}, LastName {3}, Salary {4}",GetType().Name, Id, FirstName, LastName, Salary);
+            return string.Format("Type: {0}, Id {1}, FirstName {2}, LastName {3}, Salary {4}, State {5}",GetType().Name, Id, FirstName, LastName, Salary, State);
         }
     }//end CreatePerson class
 
@@ -295,22 +308,29 @@ namespace Awesome.Domain.Events
 		[DataMember(Order = 4)] 
         public float Salary { get; private set; }
 
+		/// <summary>
+		/// The two digit code for the state
+		/// </summary>
+		[DataMember(Order = 5)] 
+        public String State { get; private set; }
+
 		public PersonCreated() 
         {
             
         }
 
-        public PersonCreated(Guid id, String firstName, String lastName, float salary)
+        public PersonCreated(Guid id, String firstName, String lastName, float salary, String state)
         {
             Id = id;
 			FirstName = firstName;
 			LastName = lastName;
 			Salary = salary;
+			State = state;
         }
 
         public override string ToString()
         {
-            return string.Format("Type: {0}, Id {1}, FirstName {2}, LastName {3}, Salary {4}",GetType().Name, Id, FirstName, LastName, Salary);
+            return string.Format("Type: {0}, Id {1}, FirstName {2}, LastName {3}, Salary {4}, State {5}",GetType().Name, Id, FirstName, LastName, Salary, State);
         }
     }//end PersonCreated class
 
@@ -413,18 +433,25 @@ namespace Awesome.Domain.Views
 		[DataMember(Order = 5)] 
         public List<BonusReward> Bonuses { get; set; }
 
+		/// <summary>
+		/// The two digit code for the state
+		/// </summary>
+		[DataMember(Order = 6)] 
+        public String State { get; set; }
+
 		public PersonView() 
         {
             
         }
 
-        public PersonView(Guid id, String firstName, String lastName, float salary, List<BonusReward> bonuses)
+        public PersonView(Guid id, String firstName, String lastName, float salary, List<BonusReward> bonuses, String state)
         {
             Id = id;
 			FirstName = firstName;
 			LastName = lastName;
 			Salary = salary;
 			Bonuses = bonuses;
+			State = state;
         }
         
     }//end PersonView class

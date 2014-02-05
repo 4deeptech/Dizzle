@@ -29,6 +29,9 @@
               <aggregateStateHasProperties Id="a23c7337-ee03-4281-a40e-e468892e6383">
                 <property Id="19d21330-b0d4-4a00-bd41-5ded9f1b4ca3" order="5" name="Bonuses" type="List&lt;BonusReward&gt;" description="The list of bonuses" />
               </aggregateStateHasProperties>
+              <aggregateStateHasProperties Id="5869ce1d-dad4-42e0-b5e3-7d2dd64bebbd">
+                <property Id="be3e4f7f-f162-40b7-9776-22ab739165f8" order="6" name="State" type="String" description="The two digit code for the state" />
+              </aggregateStateHasProperties>
             </properties>
           </aggregateState>
         </aggregateRootHasAggregateState>
@@ -63,6 +66,9 @@
           </domainCommandHasProperties>
           <domainCommandHasProperties Id="31d1fac4-6e7d-4c58-a36a-5597b72f7af0">
             <property Id="9cb74373-6c21-4e28-9eb4-3c2d09758ed2" order="4" name="Salary" type="float" description="The person's salaray" />
+          </domainCommandHasProperties>
+          <domainCommandHasProperties Id="6ead181a-d9c7-43e4-b953-56efc62dff24">
+            <property Id="71fd34f8-ec97-4455-8ed3-90bd9c98bf7e" order="5" name="State" type="String" description="The two digit code for the state" />
           </domainCommandHasProperties>
         </properties>
       </domainCommand>
@@ -99,6 +105,9 @@
           <viewHasProperties Id="acc2ac12-9314-449f-95f6-e3632778c971">
             <property Id="da1cd687-ad5e-4d79-b584-584e42f2a13f" order="5" name="Bonuses" type="List&lt;BonusReward&gt;" description="The list of bonuses" />
           </viewHasProperties>
+          <viewHasProperties Id="f3140ea6-2105-48df-9680-a98e51adf1d9">
+            <property Id="6fbfb2db-96fe-4f02-b5a8-f8ec11c02393" order="6" name="State" type="String" description="The two digit code for the state" />
+          </viewHasProperties>
         </properties>
         <domainEvents>
           <viewHasDomainEvents Id="a60e7029-c3f8-4a4c-830c-c64b2a9428fc">
@@ -126,6 +135,9 @@
           </domainEventHasProperties>
           <domainEventHasProperties Id="b811a4c4-b9bf-4a2f-b135-05d6209f6a07">
             <property Id="ced3a493-7319-4ff0-a87b-d5db61af2842" order="4" name="Salary" type="float" description="The person's salaray" />
+          </domainEventHasProperties>
+          <domainEventHasProperties Id="6438dd60-d7e7-4237-8c82-462ce25a93b8">
+            <property Id="52f901b7-4a3e-40bd-baa5-7065149cdf8b" order="5" name="State" type="String" description="The two digit code for the state" />
           </domainEventHasProperties>
         </properties>
       </domainEvent>

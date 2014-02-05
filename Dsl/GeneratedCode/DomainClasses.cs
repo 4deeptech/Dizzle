@@ -268,21 +268,6 @@ namespace FourDeep.Dizzle
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.View.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.DomainEvent.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.Entity.DomainClassId)) 
-				{
-					return true;
-				}
-				
 				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.AggregateRoot.DomainClassId)) 
 				{
 					// Check that creating a link with this path doesn't cause multiplicity overflow: BoundedContextHasAggregateRoot.Element
@@ -299,6 +284,21 @@ namespace FourDeep.Dizzle
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.Property.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.View.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.DomainEvent.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.Entity.DomainClassId)) 
 				{
 					return true;
 				}
@@ -327,56 +327,56 @@ namespace FourDeep.Dizzle
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::FourDeep.Dizzle.View sourceView1 = sourceElement as global::FourDeep.Dizzle.View;
-			if (sourceView1 != null)
-			{
-				// Create link for path BoundedContextHasViews.Views
-				this.Views.Add(sourceView1);
-
-				return;
-			}
-				
-			global::FourDeep.Dizzle.DomainEvent sourceDomainEvent2 = sourceElement as global::FourDeep.Dizzle.DomainEvent;
-			if (sourceDomainEvent2 != null)
-			{
-				// Create link for path BoundedContextHasDomainEvents.DomainEvents
-				this.DomainEvents.Add(sourceDomainEvent2);
-
-				return;
-			}
-				
-			global::FourDeep.Dizzle.Entity sourceEntity3 = sourceElement as global::FourDeep.Dizzle.Entity;
-			if (sourceEntity3 != null)
-			{
-				// Create link for path BoundedContextHasEntities.Entities
-				this.Entities.Add(sourceEntity3);
-
-				return;
-			}
-				
-			global::FourDeep.Dizzle.AggregateRoot sourceAggregateRoot4 = sourceElement as global::FourDeep.Dizzle.AggregateRoot;
-			if (sourceAggregateRoot4 != null)
+			global::FourDeep.Dizzle.AggregateRoot sourceAggregateRoot1 = sourceElement as global::FourDeep.Dizzle.AggregateRoot;
+			if (sourceAggregateRoot1 != null)
 			{
 				// Create link for path BoundedContextHasAggregateRoot.Element
-				this.Element = sourceAggregateRoot4;
+				this.Element = sourceAggregateRoot1;
 
 				return;
 			}
 				
-			global::FourDeep.Dizzle.DomainCommand sourceDomainCommand5 = sourceElement as global::FourDeep.Dizzle.DomainCommand;
-			if (sourceDomainCommand5 != null)
+			global::FourDeep.Dizzle.DomainCommand sourceDomainCommand2 = sourceElement as global::FourDeep.Dizzle.DomainCommand;
+			if (sourceDomainCommand2 != null)
 			{
 				// Create link for path BoundedContextHasDomainCommands.DomainCommands
-				this.DomainCommands.Add(sourceDomainCommand5);
+				this.DomainCommands.Add(sourceDomainCommand2);
 
 				return;
 			}
 				
-			global::FourDeep.Dizzle.Property sourceProperty6 = sourceElement as global::FourDeep.Dizzle.Property;
-			if (sourceProperty6 != null)
+			global::FourDeep.Dizzle.Property sourceProperty3 = sourceElement as global::FourDeep.Dizzle.Property;
+			if (sourceProperty3 != null)
 			{
 				// Create link for path BoundedContextHasProperties.Properties
-				this.Properties.Add(sourceProperty6);
+				this.Properties.Add(sourceProperty3);
+
+				return;
+			}
+				
+			global::FourDeep.Dizzle.View sourceView4 = sourceElement as global::FourDeep.Dizzle.View;
+			if (sourceView4 != null)
+			{
+				// Create link for path BoundedContextHasViews.Views
+				this.Views.Add(sourceView4);
+
+				return;
+			}
+				
+			global::FourDeep.Dizzle.DomainEvent sourceDomainEvent5 = sourceElement as global::FourDeep.Dizzle.DomainEvent;
+			if (sourceDomainEvent5 != null)
+			{
+				// Create link for path BoundedContextHasDomainEvents.DomainEvents
+				this.DomainEvents.Add(sourceDomainEvent5);
+
+				return;
+			}
+				
+			global::FourDeep.Dizzle.Entity sourceEntity6 = sourceElement as global::FourDeep.Dizzle.Entity;
+			if (sourceEntity6 != null)
+			{
+				// Create link for path BoundedContextHasEntities.Entities
+				this.Entities.Add(sourceEntity6);
 
 				return;
 			}
@@ -403,54 +403,12 @@ namespace FourDeep.Dizzle
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::FourDeep.Dizzle.View sourceView1 = sourceElement as global::FourDeep.Dizzle.View;
-			if (sourceView1 != null)
-			{
-				// Delete link for path BoundedContextHasViews.Views
-				
-				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasViews.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceView1))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::FourDeep.Dizzle.BoundedContextHasViews.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasViews.ViewDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::FourDeep.Dizzle.DomainEvent sourceDomainEvent2 = sourceElement as global::FourDeep.Dizzle.DomainEvent;
-			if (sourceDomainEvent2 != null)
-			{
-				// Delete link for path BoundedContextHasDomainEvents.DomainEvents
-				
-				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasDomainEvents.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceDomainEvent2))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::FourDeep.Dizzle.BoundedContextHasDomainEvents.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasDomainEvents.DomainEventDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::FourDeep.Dizzle.Entity sourceEntity3 = sourceElement as global::FourDeep.Dizzle.Entity;
-			if (sourceEntity3 != null)
-			{
-				// Delete link for path BoundedContextHasEntities.Entities
-				
-				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasEntities.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceEntity3))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::FourDeep.Dizzle.BoundedContextHasEntities.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasEntities.EntityDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::FourDeep.Dizzle.AggregateRoot sourceAggregateRoot4 = sourceElement as global::FourDeep.Dizzle.AggregateRoot;
-			if (sourceAggregateRoot4 != null)
+			global::FourDeep.Dizzle.AggregateRoot sourceAggregateRoot1 = sourceElement as global::FourDeep.Dizzle.AggregateRoot;
+			if (sourceAggregateRoot1 != null)
 			{
 				// Delete link for path BoundedContextHasAggregateRoot.Element
 				
-				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasAggregateRoot.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceAggregateRoot4))
+				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasAggregateRoot.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceAggregateRoot1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::FourDeep.Dizzle.BoundedContextHasAggregateRoot.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasAggregateRoot.ElementDomainRoleId);
@@ -459,12 +417,12 @@ namespace FourDeep.Dizzle
 				return;
 			}
 				
-			global::FourDeep.Dizzle.DomainCommand sourceDomainCommand5 = sourceElement as global::FourDeep.Dizzle.DomainCommand;
-			if (sourceDomainCommand5 != null)
+			global::FourDeep.Dizzle.DomainCommand sourceDomainCommand2 = sourceElement as global::FourDeep.Dizzle.DomainCommand;
+			if (sourceDomainCommand2 != null)
 			{
 				// Delete link for path BoundedContextHasDomainCommands.DomainCommands
 				
-				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasDomainCommands.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceDomainCommand5))
+				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasDomainCommands.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceDomainCommand2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::FourDeep.Dizzle.BoundedContextHasDomainCommands.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasDomainCommands.DomainCommandDomainRoleId);
@@ -473,15 +431,57 @@ namespace FourDeep.Dizzle
 				return;
 			}
 				
-			global::FourDeep.Dizzle.Property sourceProperty6 = sourceElement as global::FourDeep.Dizzle.Property;
-			if (sourceProperty6 != null)
+			global::FourDeep.Dizzle.Property sourceProperty3 = sourceElement as global::FourDeep.Dizzle.Property;
+			if (sourceProperty3 != null)
 			{
 				// Delete link for path BoundedContextHasProperties.Properties
 				
-				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasProperties.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceProperty6))
+				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasProperties.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceProperty3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::FourDeep.Dizzle.BoundedContextHasProperties.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasProperties.PropertyDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::FourDeep.Dizzle.View sourceView4 = sourceElement as global::FourDeep.Dizzle.View;
+			if (sourceView4 != null)
+			{
+				// Delete link for path BoundedContextHasViews.Views
+				
+				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasViews.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceView4))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::FourDeep.Dizzle.BoundedContextHasViews.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasViews.ViewDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::FourDeep.Dizzle.DomainEvent sourceDomainEvent5 = sourceElement as global::FourDeep.Dizzle.DomainEvent;
+			if (sourceDomainEvent5 != null)
+			{
+				// Delete link for path BoundedContextHasDomainEvents.DomainEvents
+				
+				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasDomainEvents.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceDomainEvent5))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::FourDeep.Dizzle.BoundedContextHasDomainEvents.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasDomainEvents.DomainEventDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::FourDeep.Dizzle.Entity sourceEntity6 = sourceElement as global::FourDeep.Dizzle.Entity;
+			if (sourceEntity6 != null)
+			{
+				// Delete link for path BoundedContextHasEntities.Entities
+				
+				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.BoundedContextHasEntities.GetLinks((global::FourDeep.Dizzle.BoundedContext)this, sourceEntity6))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::FourDeep.Dizzle.BoundedContextHasEntities.BoundedContextDomainRoleId, global::FourDeep.Dizzle.BoundedContextHasEntities.EntityDomainRoleId);
 				}
 
 				return;
@@ -2582,12 +2582,12 @@ namespace FourDeep.Dizzle
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.DomainEvent.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.Property.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.Property.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::FourDeep.Dizzle.DomainEvent.DomainClassId)) 
 				{
 					return true;
 				}
@@ -2616,20 +2616,20 @@ namespace FourDeep.Dizzle
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::FourDeep.Dizzle.DomainEvent sourceDomainEvent1 = sourceElement as global::FourDeep.Dizzle.DomainEvent;
-			if (sourceDomainEvent1 != null)
+			global::FourDeep.Dizzle.Property sourceProperty1 = sourceElement as global::FourDeep.Dizzle.Property;
+			if (sourceProperty1 != null)
 			{
-				// Create link for path ViewHasDomainEvents.DomainEvents
-				this.DomainEvents.Add(sourceDomainEvent1);
+				// Create link for path ViewHasProperties.Properties
+				this.Properties.Add(sourceProperty1);
 
 				return;
 			}
 				
-			global::FourDeep.Dizzle.Property sourceProperty2 = sourceElement as global::FourDeep.Dizzle.Property;
-			if (sourceProperty2 != null)
+			global::FourDeep.Dizzle.DomainEvent sourceDomainEvent2 = sourceElement as global::FourDeep.Dizzle.DomainEvent;
+			if (sourceDomainEvent2 != null)
 			{
-				// Create link for path ViewHasProperties.Properties
-				this.Properties.Add(sourceProperty2);
+				// Create link for path ViewHasDomainEvents.DomainEvents
+				this.DomainEvents.Add(sourceDomainEvent2);
 
 				return;
 			}
@@ -2656,29 +2656,29 @@ namespace FourDeep.Dizzle
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::FourDeep.Dizzle.DomainEvent sourceDomainEvent1 = sourceElement as global::FourDeep.Dizzle.DomainEvent;
-			if (sourceDomainEvent1 != null)
+			global::FourDeep.Dizzle.Property sourceProperty1 = sourceElement as global::FourDeep.Dizzle.Property;
+			if (sourceProperty1 != null)
 			{
-				// Delete link for path ViewHasDomainEvents.DomainEvents
+				// Delete link for path ViewHasProperties.Properties
 				
-				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.ViewHasDomainEvents.GetLinks((global::FourDeep.Dizzle.View)this, sourceDomainEvent1))
+				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.ViewHasProperties.GetLinks((global::FourDeep.Dizzle.View)this, sourceProperty1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::FourDeep.Dizzle.ViewHasDomainEvents.ViewDomainRoleId, global::FourDeep.Dizzle.ViewHasDomainEvents.DomainEventDomainRoleId);
+					link.Delete(global::FourDeep.Dizzle.ViewHasProperties.ViewDomainRoleId, global::FourDeep.Dizzle.ViewHasProperties.PropertyDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::FourDeep.Dizzle.Property sourceProperty2 = sourceElement as global::FourDeep.Dizzle.Property;
-			if (sourceProperty2 != null)
+			global::FourDeep.Dizzle.DomainEvent sourceDomainEvent2 = sourceElement as global::FourDeep.Dizzle.DomainEvent;
+			if (sourceDomainEvent2 != null)
 			{
-				// Delete link for path ViewHasProperties.Properties
+				// Delete link for path ViewHasDomainEvents.DomainEvents
 				
-				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.ViewHasProperties.GetLinks((global::FourDeep.Dizzle.View)this, sourceProperty2))
+				foreach (DslModeling::ElementLink link in global::FourDeep.Dizzle.ViewHasDomainEvents.GetLinks((global::FourDeep.Dizzle.View)this, sourceDomainEvent2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::FourDeep.Dizzle.ViewHasProperties.ViewDomainRoleId, global::FourDeep.Dizzle.ViewHasProperties.PropertyDomainRoleId);
+					link.Delete(global::FourDeep.Dizzle.ViewHasDomainEvents.ViewDomainRoleId, global::FourDeep.Dizzle.ViewHasDomainEvents.DomainEventDomainRoleId);
 				}
 
 				return;

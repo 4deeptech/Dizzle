@@ -23,7 +23,7 @@ namespace FourDeep.Dizzle
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\12.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideToolWindow(typeof(DizzleExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(DizzleExplorerToolWindow), Constants.DizzleEditorFactoryId)]
@@ -34,70 +34,80 @@ namespace FourDeep.Dizzle
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"CreateExampleClassF1Keyword", 
 					"@AggregateRootToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@CommandRelationshipToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.CommandRelationshipToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"CommandRelationship", 
 					"@CommandRelationshipToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@AggregateStateToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.AggregateStateToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"AggregateState", 
 					"@AggregateStateToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@DomainCommandToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.DomainCommandToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"DomainCommand", 
 					"@DomainCommandToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@AggregateStateRelationshipToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.AggregateStateRelationshipToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"AggregateStateRelationship", 
 					"@AggregateStateRelationshipToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@PropertyToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.PropertyToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Property", 
 					"@PropertyToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 5)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@DomainEventToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.DomainEventToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"DomainEvent", 
 					"@DomainEventToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 6)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@EventRelationshipToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.EventRelationshipToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"EventRelationship", 
 					"@EventRelationshipToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 7)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@ViewToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.ViewToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"View", 
 					"@ViewToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 8)]
 	[VSShell::ProvideStaticToolboxItem("FourDeep.Dizzle.DizzleToolboxTab",
 					"@EntityToolboxItem;FourDeep.Dizzle.Dsl.dll", 
 					"FourDeep.Dizzle.EntityToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Entity", 
 					"@EntityToolboxBitmap;FourDeep.Dizzle.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 9)]
 	[VSShell::ProvideEditorFactory(typeof(DizzleEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(DizzleEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(DizzleEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

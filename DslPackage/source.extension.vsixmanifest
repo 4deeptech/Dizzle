@@ -2,9 +2,9 @@
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="473d108d-ec11-4cad-9e23-2aa12b6368a2">
     <Name>Dizzle</Name>
-    <Author>FourDeep</Author>
+    <Author>4Deep Technologies LLC</Author>
     <Version>1.0.0.0</Version>
-    <Description>Four Deep Dizzle is a DSL for Event Source based DDD with CQRS. It is mainly built to be used with the Lokad.Cqrs lean implementation.</Description>
+    <Description>4Deep Dizzle is a DSL for Event Source based DDD with CQRS. It is mainly built to be used with the Lokad.Cqrs lean implementation.</Description>
     <Locale>1033</Locale>
     <MoreInfoUrl></MoreInfoUrl>
     <GettingStartedGuide></GettingStartedGuide>
@@ -12,7 +12,7 @@
     <PreviewImage></PreviewImage>
 	<InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
-      <VisualStudio Version="11.0">
+      <VisualStudio Version="12.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
